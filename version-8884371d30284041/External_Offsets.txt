@@ -1,0 +1,44 @@
+#pragma once
+#include <cstdint>
+
+namespace offsets {
+    inline constexpr const char* roblox_version = "version-8884371d30284041";
+
+    namespace DataModel {
+        inline constexpr uintptr_t CreatorId = 0x198;
+        inline constexpr uintptr_t GameId = 0x1A0;
+        inline constexpr uintptr_t GameLoaded = 0x678;
+        inline constexpr uintptr_t JobId = 0x138;
+        inline constexpr uintptr_t PlaceId = 0x1A8;
+        inline constexpr uintptr_t ServerIP = 0x660;
+        inline constexpr uintptr_t Workspace = 0x178;
+    }
+
+    namespace FakeDataModel {
+        inline constexpr uintptr_t Pointer = 0x7BDA0A0;
+        inline constexpr uintptr_t RealDataModel = 0x1D8;
+    }
+
+    namespace Instance {
+        inline constexpr uintptr_t ChildrenEnd = 0x8;
+        inline constexpr uintptr_t ChildrenStart = 0x78;
+        inline constexpr uintptr_t ClassDescriptor = 0x18;
+        inline constexpr uintptr_t ClassName = 0x8;
+        inline constexpr uintptr_t Name = 0xB0;
+        inline constexpr uintptr_t Parent = 0x70;
+    }
+
+    namespace RenderView {
+        inline constexpr uintptr_t LightingValid = 0x170;
+        inline constexpr uintptr_t SkyboxValid = 0x28D;
+    }
+
+    namespace VisualEngine {
+        inline constexpr uintptr_t Dimensions = 0xAB0;
+        inline constexpr uintptr_t FakeDataModel = 0xA90;
+        inline constexpr uintptr_t Pointer = 0x82EA3F8;
+        inline constexpr uintptr_t RenderView = 0xBB8;
+        inline constexpr uintptr_t ViewMatrix = 0x150;
+    }
+
+}
