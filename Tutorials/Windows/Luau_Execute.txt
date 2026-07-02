@@ -1,0 +1,1 @@
+Luau_Execute = "C stack overflow" 4th xref takes only 1 arg
