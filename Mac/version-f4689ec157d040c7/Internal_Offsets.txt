@@ -16,11 +16,6 @@ const auto luam_free = r(0x0x10438058B);
 const auto luam_freegco = r(0x1043858AE);
 }
 
-namespace FFlags {
-static auto enableloadmodule = r(0x106339520);
-static auto taskschedulertargetfps = r(0x1065917D0);
-}
-
 namespace Signals{
 static auto firetouchintrest = r(0x102615706);
 static auto fireproximityprompt = r(0x101784C20);
