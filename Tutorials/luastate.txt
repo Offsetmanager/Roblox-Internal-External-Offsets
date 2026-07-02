@@ -1,0 +1,26 @@
+1. press view -> open subviews -> strings 
+2. search for `Script Start`
+3. goto the xref 
+4. press **TAB** to decompile 
+
+it will take u to a line like this ( 2nd arg is getluastate )
+
+  sub_XXXXXX(v110, v18, "Script Start");
+
+5. from that line scroll up until u see the 2nd arg 
+
+  if ( v79.m128i_i64[1] )
+    _InterlockedIncrement((volatile signed __int32 *)(v79.m128i_i64[1] + 8));
+  v92 = v79;
+  v18 = sub_1D5CB60(v17, &v84, &v92); // <- this is the function we are looking for
+
+get luastate for instance is `sub_1D5CB60` in this case 
+  
+// example usage :
+
+uintptr_t glsfi = 0x1D5CB60;  // remember to rebase this
+auto call_glsfi = reinterpret_cast<lua_State* (__fastcall*)(uint64_t, uint64_t*, uint64_t*)>(glsfi);
+
+// call it
+uint64_t a = 0, b = 0;
+lua_State* L = call_glsfi(script_context, &a, &b);
