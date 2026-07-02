@@ -10,3 +10,6 @@
 ***Current player version:*** _version-f4689ec157d040c7_  
 ***Previous mac version:*** _version-6dbf65115d56458c_  
 ***Current studio version:*** _version-f1be618cb3454f7e_
+
+# Android
+***Current version:*** _2.727.1199_  
