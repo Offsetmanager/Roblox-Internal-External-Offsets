@@ -1,0 +1,1 @@
+KTable = "Trying to call method on object of type: `%s` with incorrect arguments." its a qword_xxxxxxx
