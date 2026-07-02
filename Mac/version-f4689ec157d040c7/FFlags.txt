@@ -1,0 +1,4 @@
+namespace FFlags {
+static auto enableloadmodule = r(0x106339520);
+static auto taskschedulertargetfps = r(0x1065917D0);
+}
