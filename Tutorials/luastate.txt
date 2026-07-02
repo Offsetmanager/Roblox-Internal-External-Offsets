@@ -1,3 +1,5 @@
+credits to misbrugt
+
 1. press view -> open subviews -> strings 
 2. search for `Script Start`
 3. goto the xref 
