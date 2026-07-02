@@ -1,10 +1,4 @@
 {
-    "Source": "https://offsets.imtheo.lol",
-    "Roblox Version": "version-5cf2272675e145f5",
-    "Dumper Version": "2.1.7",
-    "Dumped With": "RbxDumperV2",
-    "Dumped At": "21:32 30/06/2026",
-    "Discord": "https://offsets.imtheo.lol/discord",
     "Types": {
         "PlayerConfigurer": {
             "Pointer": "unsigned __int64"
