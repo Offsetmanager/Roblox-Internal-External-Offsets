@@ -1,0 +1,130 @@
+#pragma once
+#include <cstdint>
+#ifndef REBASE
+#define REBASE(x) (x)
+#endif
+
+namespace Offsets {
+const uintptr_t TaskSchedulerPointer = REBASE(0x81CC868);
+const uintptr_t Print = REBASE(0x4681920);
+const uintptr_t ScriptContextResume = REBASE(0x1DD39E0);
+const uintptr_t get_capabilities = REBASE(0x4760910);
+const uintptr_t KTable = REBASE(0x81CE200);
+const uintptr_t GetFFlag = REBASE(0x4A9B860);
+const uintptr_t WebSocketServiceEnableClientCreation = REBASE(0x5DC30B0);
+const uintptr_t RobloxLogCrash = REBASE(0x4A63F90);
+const uintptr_t RawScheduler = REBASE(0x7809320);
+const uintptr_t GetProperty = REBASE(0x4A63F90);
+const uintptr_t OpcodeLookupTable = REBASE(0x62176B0);
+const uintptr_t GetPropertyData = REBASE(0xC8A490);
+const uintptr_t loadSafe = REBASE(0x47065E0);
+const uintptr_t GetAppDataInfo = REBASE(0x36B0310);
+const uintptr_t TaskSchedulerTargetFps = REBASE(0x81CC5D0);
+const uintptr_t ConnectionDisconnect = REBASE(0x1D0B690);
+const uintptr_t CastArgs = REBASE(0x1CE4550);
+}
+
+namespace Hyperion {
+const uintptr_t ControlFlowGuard = REBASE(0x3E12D0);
+const uintptr_t BitMap = REBASE(0x1531D60);
+const uintptr_t ByteShift = 0xF12
+const uintptr_t PageShift = 0xC224
+const uintptr_t BitMask = 0x7255
+const uintptr_t PageSize = 0x1000
+const uintptr_t PageMask = 0xFFF
+}
+
+namespace Raknet {
+const uintptr_t ProcessNetworkPacket = REBASE(0x1361E10);
+const uintptr_t ReportNetworkError = REBASE(0xA49200);
+const uintptr_t Send = REBASE(0x31B0BB0);
+const uintptr_t HandleConnectionState = REBASE(0xA43FC0);
+}
+
+namespace FFlags {
+const uintptr_t EnableLoadModule = REBASE(0x7D54230);
+const uintptr_t LockViolationInstanceCrash = REBASE(0x7DAAD78);
+const uintptr_t LockViolationScriptCrash = REBASE(0x7D51348);
+const uintptr_t WndProcessCheck = REBASE(0x77E3008);
+}
+
+namespace Signals {
+const uintptr_t FireTouchInterest = REBASE(0x2A806C0);
+const uintptr_t FireMouseClick = REBASE(0x262F070);
+const uintptr_t FireRightMouseClick = REBASE(0x262F6E0);
+const uintptr_t FireMouseHoverEnter = REBASE(0x262F280);
+const uintptr_t FireMouseHoverLeave = REBASE(0x262F470);
+const uintptr_t IsLegalSendEvent = REBASE(0xA695B0);
+const uintptr_t FireProximityPrompt = REBASE(0x266F870);
+}
+
+namespace Instance {
+const uintptr_t PushInstance2 = REBASE(0x1DB42C0);
+const uintptr_t PushInstance = REBASE(0x1CF6FB0);
+}
+
+namespace Thread {
+const uintptr_t GetCurrentThreadId = REBASE(0x95F0);
+const uintptr_t IdentityPtr = REBASE(0x81BD8E0);
+const uintptr_t GetIdentityStruct = REBASE(0xA120);
+const uintptr_t Impersonator = REBASE(0x1CE4550);
+}
+
+namespace Lua {
+const uintptr_t Luau_Execute = REBASE(0x47128F0);
+const uintptr_t luaD_throw = REBASE(0x47003E0);
+const uintptr_t luaVM_load = REBASE(0x1D1C190);
+const uintptr_t luaH_dummynode = REBASE(0x6983298);
+const uintptr_t luaO_nilobject = REBASE(0x69833F0);
+const uintptr_t luaC_step = REBASE(0x4704C60);
+const uintptr_t luaT_eventnames = REBASE(0x7824DB0);
+const uintptr_t luaT_typenames = REBASE(0x77C7B20);
+const uintptr_t luaD_rawrunprotected = REBASE(0x47000A0);
+const uintptr_t luaG_runerrorL = REBASE(0x4703540);
+const uintptr_t lua_pushfstringL = REBASE(0x46FB5A0);
+const uintptr_t luaA_toobject = REBASE(0x46F9D30);
+const uintptr_t luaL_errorL = REBASE(0x4701800);
+const uintptr_t luaO_chunkid = REBASE(0x4731140);
+const uintptr_t luaF_newproto = REBASE(0x472B200);
+const uintptr_t luaF_freeproto = REBASE(0x472AE90);
+const uintptr_t luaS_newlstr = REBASE(0x4731EB0);
+}
+
+namespace TaskRblx {
+const uintptr_t cancel = REBASE(0x1E47320);
+const uintptr_t defer = REBASE(0x1E47630);
+const uintptr_t delay = REBASE(0x1E47A20);
+const uintptr_t desynchronize = REBASE(0x1E47C70);
+const uintptr_t spawn = REBASE(0x1E48510);
+const uintptr_t synchronize = REBASE(0x1E48690);
+const uintptr_t task_lib_init = REBASE(0x1E47EB0);
+const uintptr_t wait = REBASE(0x1E48890);
+}
+
+namespace DataModel {
+const uintptr_t FakeDataModelPointer = REBASE(0x7C3D2E8);
+const uintptr_t FakeDataModelToDataModel = 0x1D0;
+const uintptr_t Children = 0x78;
+const uintptr_t GameLoaded = 0x638;
+const uintptr_t ScriptContext = 0x440;
+const uintptr_t GameId = 0x198;
+}
+
+namespace ExtraSpace {
+const uintptr_t ScriptContextToResume = 0x12C0;
+const uintptr_t IsCoreScript = 0x180;
+const uintptr_t Userdata = 0x8;
+const uintptr_t RequireBypass = 0x891;
+const uintptr_t GetLuaStateForInstance = REBASE(0x1D03FF0);
+const uintptr_t GetLuaState = REBASE(0x1E067D0);
+}
+
+namespace InstanceBase {			
+const uintptr_t Primitive = 0x148;
+const uintptr_t Overlap = 0x1E8;
+const uintptr_t PropertyDescriptorBitFlags = 0x88;
+const uintptr_t ScriptableMask = 0x10;
+const uintptr_t ClassDescriptor = 0x18;
+const uintptr_t ClassName = 0x8;
+const uintptr_t PropDescriptor = 0x28;
+}
