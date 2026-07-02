@@ -1,0 +1,37 @@
+namespace Offsets
+{
+static auto print = r(0x10439F6E0);
+static auto scriptcontextresume = r(0x1017E58F0);
+static auto getluastate = r(0x1017D7DD4);
+static auto robloxlogcrash = r(0x1047D9F74);
+
+namespace Luau{
+const auto luau_execute = r(0x0);
+const auto luao_nilobject = r(0x105715D80);
+const auto luah_dummynode = r(0x105715EC0);
+const auto lua_newthread = r(0x1043729A7);
+const auto luaD_seterrorobj = r(0x10437F6EB);
+const auto luaF_freeproto = r(0x104380564);
+const auto luam_free = r(0x0x10438058B);
+const auto luam_freegco = r(0x1043858AE);
+}
+
+namespace FFlags {
+static auto enableloadmodule = r(0x106339520);
+static auto taskschedulertargetfps = r(0x1065917D0);
+}
+
+namespace Signals{
+static auto firetouchintrest = r(0x102615706);
+static auto fireproximityprompt = r(0x101784C20);
+static auto firemouseclick = r(0x1062AD238);
+static auto firemousehoverenter = r(0x1062AD2B8);
+static auto firemousehoverleave = r(0x1062AD338);
+static auto firerightmouseclick = r(0x1062AD3B8);
+}
+
+namespace Misc {
+static auto getproperty = r(0x1006AA470);
+static auto propertylist = r(0x1016C1D58);
+static auto propertydescriptor = 0x250;
+}
