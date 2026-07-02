@@ -1,0 +1,1 @@
+LuaO_NilObject = "Attempt to migrate WeakObjectRef across VM boundary" go inside the last return its an unk_xxxxxxx
