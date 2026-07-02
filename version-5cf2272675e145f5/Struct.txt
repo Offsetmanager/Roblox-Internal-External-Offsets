@@ -2,11 +2,6 @@
 #include <cstdint>
 #include "vmvalues.h"
 
-// BEST ENC DUMPER
-// version-5cf2272675e145f5
-// Luau 0.728.0.7280895
-// dumped 14/14 fields in 26.62s
-
 inline constexpr std::uintptr_t PROTO_DEBUGNAME = 0x38;
 inline constexpr std::uintptr_t PROTO_DEBUGINSN = 0x50;
 inline constexpr std::uintptr_t PROTO_UPVALUES = 0x20;
