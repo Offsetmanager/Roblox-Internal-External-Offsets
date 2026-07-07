@@ -4,3 +4,4 @@
 #define PROTO_ABSLINEINFO_ENC     VMValue3
 #define PROTO_SOURCE_ENC          VMValue3
 #define UDATA_META_ENC            VMValue3
+#define PROTO_DEBUGNAME_ENC       VMValue4
