@@ -1,15 +1,13 @@
 # Roblox Offsets 2026
 
 # Windows
-***Current decrypted version:*** _https://uploadnow.io/f/l2pqbtN_  
-***Current player version:*** _version-5cf2272675e145f5_  
-***Previous windows version:*** _version-1a951716f19e4638_  
-***Current studio version:*** _version-cdda02ef6a294442_
+***Current decrypted version:*** SOON
+***Current player version:*** _version-90f2fddd3b244ff6_  
+***Previous player version:*** _version-5cf2272675e145f5_  
 
 # Mac
-***Current player version:*** _version-f4689ec157d040c7_  
-***Previous mac version:*** _version-6dbf65115d56458c_  
-***Current studio version:*** _version-f1be618cb3454f7e_
+***Current player version:*** _version-e3c0bde0d2094663_  
+***Previous player version:*** _version-f4689ec157d040c7_  
 
 # Android
 ***Current version:*** _2.727.1199_  
