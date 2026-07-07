@@ -1,0 +1,38 @@
+const uintptr_t Print = 0x46D3410
+const uintptr_t GetGlobalState = 0x1D1B2F0
+const uintptr_t PushInstance = 0x1D0E240
+const uintptr_t OpcodeLookupTable = 0x627D4D0
+const uintptr_t GetProperty = 0xC97040
+const uintptr_t GetIdentityStruct = 0x47B66F0
+
+const uintptr_t ScriptContextResume = 0x1DEADC0
+const uintptr_t ScriptContextToResume = 0x12D8
+
+const uintptr_t TaskDefer = 0x1E5FB80
+const uintptr_t TaskSpawn = 0x1E60A60
+const uintptr_t TaskDelay = 0x1E5FF70
+const uintptr_t TaskWait = 0x1E60DE0
+const uintptr_t TaskCancel = 0x1E5F870
+const uintptr_t TaskSynchronize = 0x1E60BE0
+const uintptr_t TaskDesynchronize = 0x1E601C0
+
+const uintptr_t RawScheduler = 0x787D470
+const uintptr_t TaskScheduler = 0x8244248
+
+const uintptr_t Luau_Execute = 0x4768AD0
+const uintptr_t LuaO_NilObject = 0x69EA5F0
+const uintptr_t LuaH_DummyNode = 0x69EA498
+const uintptr_t LuaVMLoad = 0x1D33BA0
+
+const uintptr_t FakeDataModel = 0x7CB3D78
+const uintptr_t RealDataModel = 0x1D0
+
+const uintptr_t Primitive = 0x128
+const uintptr_t VisualEngine = 0x83D1F98
+
+const uintptr_t FireTouchInterest = 0x2AA23B0
+
+const uintptr_t KTable = 0x8245C20
+const uintptr_t GetCapabilities = 0x47B6B40 
+
+const uintptr_t ConnectionDisconnect = 0x1D22990
