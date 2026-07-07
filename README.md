@@ -1,7 +1,7 @@
 # Roblox Offsets 2026
 
 # Windows
-***Current decrypted version:*** SOON
+***Current decrypted version:*** SOON  
 ***Current player version:*** _version-90f2fddd3b244ff6_  
 ***Previous player version:*** _version-5cf2272675e145f5_  
 
