@@ -6,9 +6,9 @@
 ***Current windows:*** _https://uploadnow.io/f/ntMzghq_  
 
 # Windows
-***Future player version:*** _version-36a2600cebf1487d_  
-***Current player version:*** _version-90f2fddd3b244ff6_  
-***Previous player version:*** _version-5cf2272675e145f5_  
+***Future player version:*** 
+***Current player version:*** _version-36a2600cebf1487d_  
+***Previous player version:*** _version-90f2fddd3b244ff6_  
 
 # Mac
 ***Future player version:*** _version-56940828b8454204_  
