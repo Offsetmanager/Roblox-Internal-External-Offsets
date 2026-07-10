@@ -1,6 +1,7 @@
 # Roblox Offsets 2026
 
 # Decrypted versions
+***Windows:*** _https://gofile.io/d/0e86f9cc-a090-4aad-855a-9257fc37ac09_  
 
 ***Future windows:*** _https://uploadnow.io/f/rFVSPD5_  
 ***Current windows:*** _https://uploadnow.io/f/ntMzghq_  
