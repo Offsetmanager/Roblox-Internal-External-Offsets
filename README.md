@@ -1,4 +1,5 @@
 # Roblox Offsets 2026
+# Unknown Device _version-b97752d576e341ae_  
 
 # API (Windows Only)
 ***Tested on windows 10 and 11***  
@@ -7,8 +8,6 @@ _You can use api example for auto offsets updater or anything else_
 # Decrypted versions
 ***Future windows:***  
 ***Current windows:*** _https://gofile.io/d/0e86f9cc-a090-4aad-855a-9257fc37ac09_  
-
-# Unknown Device _version-b97752d576e341ae_  
 
 # Windows
 ***Future player version:*** _version-d66094bc9ae84754_  
