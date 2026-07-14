@@ -1,0 +1,32 @@
+namespace Offsets
+{
+const uintptr_t Print = REBASE(0x82D5B0);
+const uintptr_t PushInstance = REBASE(0x1E85FB0);
+const uintptr_t OpCodeLookUpTable = REBASE(0x5EA7840);
+const uintptr_t ScriptContextResume = REBASE(0x1EF2DD0);
+const uintptr_t KTable = REBASE(0x80C0070);
+const uintptr_t GetLuaState = REBASE(0x1E6BDA0);
+
+namespace Luau
+{
+const uintptr_t Luau_Execute =REBASE( 0x804710)
+const uintptr_t LuaO_NilObject = REBASE(0x5ea7708)
+const uintptr_t LuaH_DummyNode = REBASE(0x5ea7590)
+}
+
+namespace DataModel
+{
+const uintptr_t Children = 0x70;
+const uintptr_t GameLoaded = 0x578;
+const uintptr_t ScriptContext = 0x440;
+const uintptr_t FakeDataModelToDataModel = 0x1D0;
+
+const uintptr_t FakeDataModelPointer = REBASE(0x851f568);
+}
+
+namespace ExtraSpace
+{
+const uintptr_t ScriptContextToResume=0x7D8;
+const uintptr_t RequireBypass=0x909;
+}
+}
