@@ -1,29 +1,44 @@
-roblox base: 0x7ff60e640000
-ScriptContextResume: 0x1dbd460
-GetProperty: 0x4afdb10
-luaC_step: 0x46bac60
-gcstep: 0x46ba740
-markroot: 0x46bb150
-lua_clock: 0x46d77d0
-NewInstance: 0xac4a30
-luaO_nilobject: 0x69336f0
-luaH_dummynode: 0x6933598
-PushInstance: 0x1ce0cc0
-luaF_newLClosure: 0x46e1370
-xref: 0x1cba3cf
-lua_pushstring: 0x46b1840
-lua_setfield: 0x46b2b90
-LuaVMLoad: 0x1d06510
-newblock: 0x46d7ff0
-luaD_throw: 0x46b6310
-newclasspage: 0x46d8090
-newpage: 0x46d8190
-luaT_typenames: 0x6933480
-L->global: 0x60
-g->gcstate: 0x1
-g->gray: 0x28
-g->grayagain: 0x20
-g->weak: 0x18
-g->gcstepmul: 0x40
-g->gcstepsize: 0x44
-g->freepages: 0x1a8
+namespace Offsets
+{
+    const uintptr_t Print = REBASE(0x1E6B8E0);
+    const uintptr_t PushInstance = REBASE(0x1CE0CC0);
+    const uintptr_t OpCodeLookUpTable = REBASE(0x61C76E0);
+    const uintptr_t ScriptContextResume = REBASE(0x1DBD460);
+    const uintptr_t KTable = REBASE(0x817A980);
+    const uintptr_t GetLuaState = REBASE(0x1CEDE20);
+
+    namespace FFlags
+    {
+        const uintptr_t TaskSchedulerTargetFps = REBASE(0x493DFE0);
+        const uintptr_t EnableLoadModule = REBASE(0x7CFFF00);
+    }
+
+    namespace Signals
+    {
+        const uintptr_t FireMouseClick = REBASE(0x2611D70);
+        const uintptr_t FireRightMouseClick = REBASE(0x26123E0);
+        const uintptr_t FireMouseHoverEnter = REBASE(0x2611F80);
+        const uintptr_t FireMouseHoverLeave = REBASE(0x2612170);
+        const uintptr_t FireProximityPrompt = REBASE(0x2653780);
+        const uintptr_t FireTouchInterest = REBASE(0x2A50730);
+    }
+
+    namespace Misc
+    {
+        const uintptr_t GetIdentityStruct = REBASE(0x47166A0);
+        const uintptr_t IdentityPtr = REBASE(0x816A140);
+        const uintptr_t GetModuleFromVMStateMap = REBASE(0x1D1CF00);
+        const uintptr_t GetProperty = REBASE(0xC88A20);
+        const uintptr_t Impersonator = REBASE(0x1CCE250);
+    }
+
+    namespace Luau
+    {
+        const uintptr_t LuaC_step = REBASE(0x46BAC60);
+        const uintptr_t LuaD_throw = REBASE(0x46B6310);
+        const uintptr_t LuaVM_Load = REBASE(0x1D06510);
+        const uintptr_t Luau_Execute = REBASE(0x46C8A40);
+        const uintptr_t LuaH_DummyNode = REBASE(0x6933598);
+        const uintptr_t LuaO_NilObject = REBASE(0x69336F0);
+    }
+}
