@@ -1,0 +1,70 @@
+#pragma once
+#include <cstdint>
+#define REBASE(x) (x)
+
+namespace Offsets
+{
+    inline constexpr const char* LuauVersion = "0.729.24.7290838";
+
+    namespace Luau {
+        inline const uintptr_t Lua_pcall = REBASE(0x18c1d62);
+        inline const uintptr_t loadsafe = REBASE(0x18c1e8c);
+        inline const uintptr_t luaC_step = REBASE(0x18b1f2e);
+        inline const uintptr_t luaF_newproto = REBASE(0x18b1820);
+        inline const uintptr_t luaL_findtable = REBASE(0x18a78e0);
+        inline const uintptr_t luaL_register = REBASE(0x18a77ac);
+        inline const uintptr_t luaO_chunkid = REBASE(0x18b9067);
+        inline const uintptr_t lua_yield = REBASE(0x18ae7fe);
+        inline const uintptr_t luaopen_base = REBASE(0x18a855b);
+        inline const uintptr_t luaopen_math = REBASE(0x18b6a65);
+        inline const uintptr_t luaopen_os = REBASE(0x18b9153);
+    }
+
+    namespace LuaLib {
+        inline const uintptr_t luaB_assert = REBASE(0x18a8a98);
+        inline const uintptr_t luaB_error = REBASE(0x18a8b0d);
+        inline const uintptr_t luaB_gcinfo = REBASE(0x18a8b82);
+        inline const uintptr_t luaB_getfenv = REBASE(0x18a8bad);
+        inline const uintptr_t luaB_getmetatable = REBASE(0x18a8c05);
+        inline const uintptr_t luaB_newproxy = REBASE(0x18a8c53);
+        inline const uintptr_t luaB_next = REBASE(0x18a84a4);
+        inline const uintptr_t luaB_pcall = REBASE(0x18a8748);
+        inline const uintptr_t luaB_pcallrun = REBASE(0x18a8818);
+        inline const uintptr_t luaB_print = REBASE(0x18a8ce0);
+        inline const uintptr_t luaB_rawequal = REBASE(0x18a8da3);
+        inline const uintptr_t luaB_rawget = REBASE(0x18a8deb);
+        inline const uintptr_t luaB_rawlen = REBASE(0x18a8e8e);
+        inline const uintptr_t luaB_rawset = REBASE(0x18a8e36);
+        inline const uintptr_t luaB_select = REBASE(0x18a8eef);
+        inline const uintptr_t luaB_setfenv = REBASE(0x18a8f9a);
+        inline const uintptr_t luaB_setmetatable = REBASE(0x18a9084);
+        inline const uintptr_t luaB_tonumber = REBASE(0x18a913f);
+        inline const uintptr_t luaB_tostring = REBASE(0x18a9277);
+        inline const uintptr_t luaB_type = REBASE(0x18a92a5);
+        inline const uintptr_t luaB_typeof = REBASE(0x18a92e6);
+    }
+
+    namespace Misc {
+        inline const uintptr_t Print = REBASE(0x1be0c10);
+        inline const uintptr_t luaF_freeproto = REBASE(0x18b1c41);
+        inline const uintptr_t luaL_tostring = REBASE(0x18a8214);
+        inline const uintptr_t lua_clock = REBASE(0x18b9171);
+    }
+
+    namespace Roblox {
+        inline const uintptr_t ConnectionDisconnect = REBASE(0x13c3a4);
+        inline const uintptr_t ScriptContextResume = REBASE(0x1d7b94);
+    }
+
+    namespace Raknet {
+        inline const uintptr_t HandleConnectionState = REBASE(0x5093fa0);
+        inline const uintptr_t ReportNetworkError = REBASE(0x5093b4a);
+    }
+
+    namespace Task {
+        inline const uintptr_t desynchronize = REBASE(0x15bdb0);
+        inline const uintptr_t synchronize = REBASE(0x15bbda);
+        inline const uintptr_t wait = REBASE(0x15c67e);
+    }
+
+}
