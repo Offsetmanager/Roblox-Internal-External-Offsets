@@ -5,16 +5,16 @@
 _You can use api example for auto offsets updater or anything else_  
 
 # Decrypted Version
-***Current:*** _https://uploadnow.io/f/LDm3L70_
+***Previous:*** _https://uploadnow.io/f/LDm3L70_
 
 # Windows
 ***Future player version:***  
-***Current player version:*** _version-eb158392d1c84e6a_  
-***Previous player version:*** _version-d66094bc9ae84754_  
+***Current player version:*** _version-ddf02245bdbb428c_  
+***Previous player version:*** _version-eb158392d1c84e6a_  
 
 # Mac
 ***Future player version:***   
-***Current player version:*** _version-d52e0a93d4ea5497_  
+***Current player version:*** _version-f2083d2275244e01_  
 ***Previous player version:*** _version-56940828b8454204_  
 
 # Credits
