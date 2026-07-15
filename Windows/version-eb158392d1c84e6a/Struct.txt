@@ -1,0 +1,270 @@
+#define CLOSURE_CONT_ENC vmval4
+#define CLOSURE_DEBUGNAME_ENC vmval2
+#define LSTATE_STACKSIZE_ENC vmval3
+#define PROTO_ABSLINEINFO_ENC vmval3
+#define PROTO_DEBUGINSN_ENC vmval3
+#define PROTO_DEBUGNAME_ENC vmval2
+#define PROTO_LINEINFO_ENC vmval4
+#define PROTO_LOCVARS_ENC vmval2
+#define PROTO_SOURCE_ENC vmval4
+#define PROTO_TYPEINFO_ENC vmval1
+#define PROTO_UPVALUES_ENC vmval3
+#define PROTO_USERDATA_ENC vmval4
+#define TSTRING_HASH_ENC vmval1
+#define UDATA_META_ENC vmval1
+
+#define CommonHeader \
+    uint8_t marked; /* offset 0 */ \
+    uint8_t tt; /* offset 1 */ \
+    uint8_t memcat; /* offset 2 */
+
+struct LuaTable
+{
+    CommonHeader; /* offset 0 */
+    unsigned char safeenv; /* offset 3 */
+    unsigned char lsizenode; /* offset 4 */
+    unsigned char tmcache; /* offset 5 */
+    unsigned char readonly; /* offset 6 */
+    unsigned char nodemask8; /* offset 7 */
+    int sizearray; /* offset 8 */
+    union /* offset 12 */
+    {
+        int lastfree; /* offset 0 */
+        int aboundary; /* offset 0 */
+    };
+    LuaNode* node; /* offset 16 */
+    TValue* array; /* offset 24 */
+    LuaTable* metatable; /* offset 32 */
+    GCObject* gclist; /* offset 40 */
+};
+
+struct global_State
+{
+    struct stringtable strt; /* offset 0 */
+    size_t GCthreshold; /* offset 16 */
+    size_t totalbytes; /* offset 24 */
+    GCObject* gray; /* offset 32 */
+    GCObject* grayagain; /* offset 40 */
+    GCObject* weak; /* offset 48 */
+    int gcgoal; /* offset 56 */
+    int gcstepmul; /* offset 60 */
+    int gcstepsize; /* offset 64 */
+    unsigned char currentwhite; /* offset 68 */
+    unsigned char gcstate; /* offset 69 */
+    lua_Alloc frealloc; /* offset 72 */
+    void* ud; /* offset 80 */
+    lua_Page* allgcopages; /* offset 88 */
+    lua_State* mainthread; /* offset 96 */
+    lua_Page* sweepgcopage; /* offset 104 */
+    struct lua_Page* allpages; /* offset 112 */
+    UpVal uvhead; /* offset 120 */
+    lua_Page* freegcopages[40]; /* offset 160 */
+    lua_Page* freepages[40]; /* offset 480 */
+    LuaTable* mt[14]; /* offset 800 */
+    TString* ttname[14]; /* offset 912 */
+    TString* tmname[21]; /* offset 1024 */
+    TValue pseudotemp; /* offset 1192 */
+    TValue registry; /* offset 1208 */
+    registryfree_t registryfree; /* offset 1224 */
+    struct lua_jmpbuf* errorjmp;
+    lua_Callbacks cb; /* offset 1240 */
+    unsigned __int64 ptrenckey[4]; /* offset 1320 */
+    unsigned __int64 rngstate; /* offset 1352 */
+    lua_ExecutionCallbacks ecb; /* offset 1360 */
+    alignas(16) unsigned char ecbdata[512]; /* offset 1440 */
+    lua_UdataDirectAccessData udatadirect[130]; /* offset 1952 */
+    size_t memcatbytes[256]; /* offset 11312 */
+    void (*udatagc[128])(struct lua_State*, void*); /* offset 13360 */
+    LuaTable* udatamt[128]; /* offset 14384 */
+    TString* lightuserdataname[128]; /* offset 15408 */
+    struct LuaTable* udatadirectfields[130]; /* offset 16432 */
+    struct GCStats gcstats; /* offset 17472 */
+    unsigned int lastprotoid; /* offset 17656 */
+#ifdef LUAI_GCMETRICS
+    GCMetrics gcmetrics; /* offset 17664 */
+#endif
+};
+
+struct Udata
+{
+    CommonHeader; /* offset 0 */
+    unsigned char tag; /* offset 3 */
+    int len; /* offset 4 */
+    UDATA_META_ENC<struct LuaTable*> metatable; /* offset 8 */
+    char data[1]; /* offset 16 */
+};
+
+struct TString
+{
+    CommonHeader; /* offset 0 */
+    unsigned char gap_00[0x1]; /* offset 3 */
+    uint16_t atomflag; /* offset 4 */
+    int16_t atom; /* offset 6 */
+    TString* next; /* offset 8 */
+    TSTRING_HASH_ENC<unsigned int> hash; /* offset 16 */
+    unsigned int len; /* offset 20 */
+    char data[1]; /* offset 24 */
+};
+
+struct Proto
+{
+    CommonHeader; /* offset 0 */
+    unsigned char maxstacksize; /* offset 3 */
+    unsigned char flags; /* offset 4 */
+    unsigned char is_vararg; /* offset 5 */
+    unsigned char nups; /* offset 6 */
+    unsigned char numparams; /* offset 7 */
+    PROTO_UPVALUES_ENC<TString**> upvalues; /* offset 8 */
+    PROTO_SOURCE_ENC<TString*> source; /* offset 16 */
+    void* execdata; /* offset 24 */
+    uintptr_t exectarget; /* offset 32 */
+    TValue* k; /* offset 40 */
+    unsigned int* code; /* offset 48 */
+    PROTO_ABSLINEINFO_ENC<int*> abslineinfo; /* offset 56 */
+    PROTO_LINEINFO_ENC<unsigned char*> lineinfo; /* offset 64 */
+    PROTO_DEBUGNAME_ENC<TString*> debugname; /* offset 72 */
+    GCObject* gclist; /* offset 80 */
+    PROTO_DEBUGINSN_ENC<unsigned char*> debuginsn; /* offset 88 */
+    PROTO_LOCVARS_ENC<struct LocVar*> locvars; /* offset 96 */
+    Proto** p; /* offset 104 */
+    PROTO_USERDATA_ENC<void*> userdata; /* offset 112 */
+    PROTO_TYPEINFO_ENC<unsigned char*> typeinfo; /* offset 120 */
+    unsigned int* codeentry; /* offset 128 */
+    int sizecode; /* offset 136 */
+    int sizeupvalues; /* offset 140 */
+    int sizelineinfo; /* offset 144 */
+    int sizek; /* offset 148 */
+    int sizetypeinfo; /* offset 152 */
+    int linegaplog2; /* offset 156 */
+    int bytecodeid; /* offset 160 */
+    int linedefined; /* offset 164 */
+    int sizelocvars; /* offset 168 */
+    int sizep; /* offset 172 */
+    struct FeedbackVectorSlot* feedbackvec; /* offset 176 */
+    int feedbackvecsize; /* offset 184 */
+    int funid; /* offset 188 */
+    Proto* optimized; /* offset 192 */
+    Proto* deoptimized; /* offset 200 */
+    uint64_t cost; /* offset 208 */
+};
+
+struct Closure
+{
+    CommonHeader; /* offset 0 */
+    unsigned char preload; /* offset 3 */
+    unsigned char stacksize; /* offset 4 */
+    unsigned char nupvalues; /* offset 5 */
+    unsigned char isC; /* offset 6 */
+    GCObject* gclist;
+    struct LuaTable* env; /* offset 16 */
+    union /* offset 24 */
+    {
+        struct
+        {
+            lua_CFunction f; /* offset 0 */
+            CLOSURE_CONT_ENC<lua_Continuation> cont; /* offset 8 */
+            CLOSURE_DEBUGNAME_ENC<const char*> debugname; /* offset 16 */
+            TValue upvals[1]; /* offset 24 */
+        } c;
+        struct
+        {
+            Proto* p; /* offset 0 */
+            TValue uprefs[1]; /* offset 8 */
+        } l;
+    };
+};
+
+struct CallInfo
+{
+    TValue* base; /* offset 0 */
+    TValue* top; /* offset 8 */
+    Proto* p; /* offset 16 */
+    TValue* func; /* offset 24 */
+    union /* offset 32 */
+    {
+        const Instruction* savedpc; /* offset 0 */
+        int errfunc; /* offset 0 */
+    };
+    int nresults; /* offset 40 */
+    unsigned int flags; /* offset 44 */
+};
+
+struct lua_State
+{
+    CommonHeader; /* offset 0 */
+    unsigned char status; /* offset 3 */
+    unsigned char activememcat; /* offset 4 */
+    bool singlestep; /* offset 5 */
+    bool isactive; /* offset 6 */
+    UpVal* openupval; /* offset 8 */
+    GCObject* gclist; /* offset 16 */
+    TString* namecall; /* offset 24 */
+    unsigned short nCcalls; /* offset 32 */
+    unsigned short baseCcalls; /* offset 34 */
+    unsigned int cachedslot; /* offset 36 */
+    LSTATE_STACKSIZE_ENC<int> stacksize; /* offset 40 */
+    int size_ci; /* offset 44 */
+    LuaTable* gt; /* offset 48 */
+    CallInfo* end_ci; /* offset 56 */
+    CallInfo* base_ci; /* offset 64 */
+    TValue* stack_last; /* offset 72 */
+    CallInfo* ci; /* offset 80 */
+    TValue* stack; /* offset 88 */
+    global_State* global; /* offset 96 */
+    TValue* top; /* offset 104 */
+    TValue* base; /* offset 112 */
+    struct RobloxExtraSpace* userdata; /* offset 120 */
+};
+
+struct lua_Debug
+{
+    const char* short_src; /* offset 0 */
+    const char* what; /* offset 8 */
+    const char* source; /* offset 16 */
+    const char* name; /* offset 24 */
+    void* userdata; /* offset 32 */
+    int linedefined; /* offset 40 */
+    int currentline; /* offset 44 */
+    unsigned char nupvals; /* offset 48 */
+    unsigned char isvararg; /* offset 49 */
+    unsigned char nparams; /* offset 50 */
+    char ssbuf[256]; /* offset 56 */
+};
+
+struct Shared
+{
+    unsigned char gap_00[0x10]; /* offset 0 */
+    void* scriptContext; /* offset 16 */
+};
+
+struct RobloxExtraSpace
+{
+    unsigned char gap_00[0x18]; /* offset 0 */
+    std::shared_ptr<Shared> shared; /* offset 24 */
+    unsigned char gap_01[0x8]; /* offset 40 */
+    std::weak_ptr<uintptr_t> script; /* offset 48 */
+    uint64_t capabilities; /* offset 64 */
+    unsigned char gap_02[0x30]; /* offset 72 */
+    uint64_t identity; /* offset 120 */
+};
+
+struct stringtable
+{
+    struct TString** hash; /* offset 0 */
+    int nuse; /* offset 8 */
+    int size; /* offset 12 */
+};
+
+typedef struct lua_Callbacks
+{
+    void* userdata;
+    void (*onallocate)(lua_State* L, size_t osize, size_t nsize); /* offset 8 */
+    int16_t(*useratom)(lua_State* L, const char* s, size_t l); /* offset 16 */
+    void (*debuginterrupt)(lua_State* L, lua_Debug* ar); // GUESSED
+    void (*debugprotectederror)(lua_State* L); /* offset 32 */
+    void (*debugbreak)(lua_State* L, lua_Debug* ar); /* offset 40 */
+    void (*interrupt)(lua_State* L, int gc); /* offset 48 */
+    void (*userthread)(lua_State* LP, lua_State* L); /* offset 56 */
+    void (*debugstep)(lua_State* L, lua_Debug* ar); // GUESSED
+    void (*panic)(lua_State* L, int errcode); // GUESSED
+} lua_Callbacks;
