@@ -9,7 +9,7 @@ _You can use api example for auto offsets updater or anything else_
 ***Current windows:*** _https://gofile.io/d/0e86f9cc-a090-4aad-855a-9257fc37ac09_  
 
 # Windows
-***Future player version:*** 
+***Future player version:***  
 ***Current player version:*** _version-eb158392d1c84e6a_  
 ***Previous player version:*** _version-d66094bc9ae84754_  
 
