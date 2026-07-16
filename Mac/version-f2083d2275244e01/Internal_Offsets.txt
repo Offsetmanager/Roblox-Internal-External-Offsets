@@ -1,0 +1,16 @@
+inline uintptr_t Print = REBASE(0x1001A33F0);
+inline uintptr_t Identity = REBASE(0x1002159D4);
+inline uintptr_t Spawn = REBASE(0x1001A8CA0);
+inline uintptr_t LuauLoad = REBASE(0x1018293DC);
+inline uintptr_t TaskScheduler = REBASEOBFC(0x1074E0F98);
+inline uintptr_t Luau_Execute = REBASE(0x1018312dc);
+inline uintptr_t LuaPCall = REBASE(0x10180ADFC);
+inline uintptr_t RaknetSend = REBASE(0x101BD8F9C);
+inline uintptr_t RaknetShared = REBASE(0x101BD95A4);
+inline uintptr_t RaknetSharedPtr = REBASE(0x101BD976C);
+inline uintptr_t WHSJ = REBASE(0x10027AAE0);
+inline uintptr_t OpcodeLookupTable = REBASE(0x105fc54c0);
+inline uintptr_t ScriptContextResume_ = REBASE(0x10022c044);
+inline uintptr_t GetLuaStateForInstance = REBASE(0x100260e20);
+inline const uintptr_t LuaO_NilObject = REBASE(0x105FC54C0);
+inline const uintptr_t LuaH_DummyNode = REBASE(0x105FC55D0);
