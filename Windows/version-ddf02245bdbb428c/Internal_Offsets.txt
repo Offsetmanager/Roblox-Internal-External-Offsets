@@ -1,0 +1,37 @@
+const uintptr_t Print = 0x470C4E0;
+const uintptr_t GetGlobalState = 0x1D36CE0;
+const uintptr_t PushInstance = 0x1D29C40;
+const uintptr_t GetProperty = 0xC9D2A0;
+const uintptr_t OpcodeLookupTable = 0x62DFFA0;
+
+const uintptr_t IdentityPtr = 0x82AB098;
+const uintptr_t GetTlsPointer = 0xA120;
+
+const uintptr_t ScriptContextResume = 0x1E067F0;
+const uintptr_t ScriptContextToResume = 0x7D8;
+
+const uintptr_t TaskDefer = 0x1E7B970;
+const uintptr_t TaskSpawn = 0x1E7C850;
+const uintptr_t TaskDelay = 0x1E7BD60;
+const uintptr_t TaskWait = 0x1E7CBD0;
+const uintptr_t TaskCancel = 0x1E7B660;
+const uintptr_t TaskSynchronize = 0x1E7C9D0;
+const uintptr_t TaskDesynchronize = 0x1E7BFB0;
+
+const uintptr_t Luau_Execute = 0x47A1E30;
+const uintptr_t LuaO_NilObject = 0x6A4D5E8;
+const uintptr_t LuaH_DummyNode = 0x6A4D478;
+const uintptr_t LuaVMLoad = 0x4795860;
+const uintptr_t LuaD_Throw = 0x478F6A0;
+
+const uintptr_t FireTouchInterest    = 0x2ACAF00;
+const uintptr_t FireMouseClick       = 0x266D770;
+const uintptr_t FireMouseHoverEnter  = 0x266D980;
+const uintptr_t FireMouseHoverLeave  = 0x266DB70;
+const uintptr_t FireRightMouseClick  = 0x266DDE0;
+const uintptr_t FireProximityPrompt  = 0x26ADE00;
+
+const uintptr_t GetCapabilities = 0x47F0430;
+const uintptr_t KTable = 0x82BB920;
+
+const uintptr_t ConnectionDisconnect = 0x1D3E370;
