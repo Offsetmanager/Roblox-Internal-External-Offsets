@@ -1,0 +1,21 @@
+namespace Offsets
+{
+const uintptr_t Print = REBASE(0x5B06AE8);
+const uintptr_t PushInstance = REBASE(0x21C9200);
+const uintptr_t ScriptContextResume = REBASE(0x21D42C8);
+const uintptr_t KTable = REBASE(0x6987B58);
+const uintptr_t GetLuaState = REBASE(0x21D0C40);
+
+namespace Luau
+{
+const uintptr_t LuaO_NilObject = REBASE(0x7C3B48);
+const uintptr_t Lua_GetField= REBASE(0x21BFD6C);
+} // lowk shit mb
+
+namespace Identity
+{
+const uintptr_t GetIdentityStuff= REBASE(0x20FA148);
+const uintptr_t IdentityPtr = REBASE(0x680D328);
+const uintptr_t GetTLSPointer= REBASE(0x236C6A4);
+}
+}
