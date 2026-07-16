@@ -5,7 +5,7 @@
 _You can use api example for auto offsets updater or anything else_  
 
 # Decrypted Version
-***Previous:*** _https://uploadnow.io/f/LDm3L70_
+***Current:*** _https://uploadnow.io/f/lgC1JkB_
 
 # Windows
 ***Future player version:***  
