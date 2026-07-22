@@ -5,10 +5,11 @@
 _You can use api example for auto offsets updater or anything else_  
 
 # Decrypted Version
+***Future:*** _https://uploadnow.io/f/kXYnnrq_  
 ***Current:*** _https://uploadnow.io/f/lgC1JkB_
 
 # Windows
-***Future player version:***  
+***Future player version:*** _version-9affbe66b2624d20_  
 ***Current player version:*** _version-ddf02245bdbb428c_  
 ***Previous player version:*** _version-eb158392d1c84e6a_  
 
