@@ -5,7 +5,7 @@
 _You can use api example for auto offsets updater or anything else_  
 
 # Links
-***Current version:*** _(Windows)[https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-9affbe66b2624d20]_  
+***Current version:*** _[Windows](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-9affbe66b2624d20)_  
 
 # Decrypted Version
 ***Future:*** _https://uploadnow.io/f/kXYnnrq_  
