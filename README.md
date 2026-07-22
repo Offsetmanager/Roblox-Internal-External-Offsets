@@ -4,6 +4,9 @@
 ***Tested on windows 10 and 11***  
 _You can use api example for auto offsets updater or anything else_  
 
+# Links
+***Current version:*** _(Windows)[https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-9affbe66b2624d20]_  
+
 # Decrypted Version
 ***Future:*** _https://uploadnow.io/f/kXYnnrq_  
 ***Current:*** _https://uploadnow.io/f/lgC1JkB_
