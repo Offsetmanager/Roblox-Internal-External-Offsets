@@ -9,7 +9,7 @@ _You can use api example for auto offsets updater or anything else_
 ***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-9affbe66b2624d20)_  
 
 # Decrypted Version
-***Future:***  
+***Future:***  _https://uploadnow.io/f/FPLjrR0_  
 ***Current:*** _https://uploadnow.io/f/kXYnnrq_  
 
 # Windows
