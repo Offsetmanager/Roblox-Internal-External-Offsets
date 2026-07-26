@@ -13,7 +13,7 @@ _You can use api example for auto offsets updater or anything else_
 ***Current:*** _https://uploadnow.io/f/kXYnnrq_  
 
 # Windows
-***Future player version:***  
+***Future player version:***  _version-ed2b47b81f08484a_  
 ***Current player version:*** _version-9affbe66b2624d20_  
 ***Previous player version:*** _version-ddf02245bdbb428c_  
 
