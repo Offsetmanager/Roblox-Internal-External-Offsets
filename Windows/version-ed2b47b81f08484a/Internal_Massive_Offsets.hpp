@@ -5,7 +5,7 @@ struct lua_State;
 struct YieldState;
 struct YieldingLuaThread;
 
-// offset 0x1d29e60 can be 0x0 I not tested.
+// offset 0x1d29e60 can be 0x0 I haven't tested it.
 
 #define REBASE(Address) (Address + reinterpret_cast<uintptr_t>(GetModuleHandleA(nullptr)))
 
