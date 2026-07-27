@@ -1,10 +1,11 @@
 #include <cstdint>
 
 // ------------------------------------------------------------
-//  by phantomteam
+//  Dumper      : Argus 1.0.2
+//  Owner       : @phantomteam | @kreker757
 //  Version     : version-ed2b47b81f08484a
-//  Success     : 210
 //  Failed      : 0
+//  Success     : 210
 //  Total       : 210
 // ------------------------------------------------------------
 
