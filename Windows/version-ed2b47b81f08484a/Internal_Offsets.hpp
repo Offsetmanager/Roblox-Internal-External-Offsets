@@ -1,34 +1,45 @@
-roblox base: 0x7ff639cf0000
-ScriptContextResume: 0x1e2d8e0
-GetProperty: 0x50ea8b0
-luaC_step: 0x4b25ae0
-gcstep: 0x4b255b0
-luaF_freeproto: 0x4b4c660
-luaM_freearray: 0x4b42f90
-freeblock: 0x4b42e40
-markroot: 0x4b26040
-lua_clock: 0x4b42d90
-luaM_freegco: 0x4b43010
-NewInstance: 0xadc6b0
-luaH_dummynode: 0x6b76d98
-PushInstance: 0x1d51980
-luaF_newLClosure: 0x4b4c930
-xref: 0x1d2b09f
-lua_pushstring: 0x4b1c1d0
-lua_setfield: 0x4b1d530
-LuaVMLoad: 0x1da88a0
-newblock: 0x4b435b0
-luaD_throw: 0x4b210c0
-newclasspage: 0x4b43640
-newpage: 0x4b43740
-luaT_typenames: 0x6b76c80
-L->global: 0x60
-CommonHeader->memcat: 0x2
-Proto->code: 0x28
-Proto->p: 0x40
-Proto->k: 0x20
-Proto->lineinfo: 0x50
-Proto->locvars: 0x0
-Proto->upvalues: 0x0
-Proto->debuginsn: 0x38
-g->gcstate: 0x49
+#include <cstdint>
+
+namespace Offsets
+{
+    const uintptr_t Print = REBASE(0x4BE0790);
+    const uintptr_t PushInstance = REBASE(0x1D58820);
+    const uintptr_t OpCodeLookUpTable = REBASE(0x6358A60);
+    const uintptr_t ScriptContextResume = REBASE(0x1E2D8E0);
+    const uintptr_t KTable = REBASE(0x836C500);
+    const uintptr_t GetGlobalState = REBASE(0x1D5F230);
+
+    namespace Luau
+    {
+        const uintptr_t Luau_Execute = REBASE(0x4B24200);
+        const uintptr_t LuaO_NilObject = REBASE(0x6B76F08);
+        const uintptr_t LuaH_DummyNode = REBASE(0x6B76D98);
+        const uintptr_t LuaD_Throw = REBASE(0x4B210C0);
+    }
+
+    namespace DataModel
+    {
+        const uintptr_t Children = 0x70;
+        const uintptr_t GameLoaded = 0x578;
+        const uintptr_t ScriptContext = 0x440;
+        const uintptr_t FakeDataModelToDataModel = 0x1D0;
+
+        const uintptr_t FakeDataModelPointer = REBASE(0x7DCCD88);
+    }
+
+    namespace TaskScheduler
+    {
+        const uintptr_t TaskSchedulerPointer = REBASE(0x836AAE8);
+
+        const uintptr_t JobStart = 0xC8;
+        const uintptr_t JobEnd = 0xD0;
+        const uintptr_t JobName = 0x18;
+    }
+
+    namespace ExtraSpace
+    {
+        const uintptr_t ScriptContextToResume = 0x7E8;
+        const uintptr_t RequireBypass = 0x818;
+        const uintptr_t isCoreScript = 0x168;
+    }
+}
