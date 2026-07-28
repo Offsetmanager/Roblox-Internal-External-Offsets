@@ -1,19 +1,17 @@
 #include <cstdint>
 
 // ------------------------------------------------------------
-//  Dumper      : Argus 1.0.2
+//  Dumper      : Argus 1.1.5
 //  Owner       : @phantomteam | @kreker757
 //  Version     : version-145f189a6a974303
 //  Failed      : 0
-//  Success     : 220
-//  Total       : 220
+//  Success     : 191
+//  Total       : 191
 // ------------------------------------------------------------
 
 namespace Offsets
 {
     const uintptr_t AttachRobloxExtraSpace = REBASE(0x1DB73E0);
-    const uintptr_t CastArgs = REBASE(0x1D37050);
-    const uintptr_t FireTouchInterest = REBASE(0x4BA62E0);
     const uintptr_t GetCapabilities = REBASE(0x215D1F0);
     const uintptr_t GetContextObject = REBASE(0x1D66C90);
     const uintptr_t GetCurrentThreadId = REBASE(0x5123F60);
@@ -27,7 +25,6 @@ namespace Offsets
     const uintptr_t Impersonator = REBASE(0x512B690);
     const uintptr_t NewInstance = REBASE(0xAB98C0);
     const uintptr_t OpCodeLookupTable = REBASE(0x66BB660);
-    const uintptr_t ProcessNetworkPacket = REBASE(0x6903A0);
     const uintptr_t PushInstance = REBASE(0x1D48CA0);
     const uintptr_t ScriptContextResume = REBASE(0x4D106B0);
     const uintptr_t cocreate = REBASE(0x4B7E710);
@@ -120,7 +117,7 @@ namespace Offsets
         const uintptr_t RawScheduler = REBASE(0x5FE9EC0);
         const uintptr_t TaskDesynchronize = REBASE(0x1E95C80);
         const uintptr_t TaskSchedulerTargetFps = REBASE(0x6C36228);
-        const uintptr_t TaskSpawn = REBASE(0x1E9AC20);
+        const uintptr_t TaskSpawn = REBASE(0x1E96520);
         const uintptr_t TaskSynchronize = REBASE(0x1E966A0);
         const uintptr_t task_cancel = REBASE(0x1E95330);
         const uintptr_t task_defer = REBASE(0x202120);
@@ -136,30 +133,15 @@ namespace Offsets
 
     namespace Input
     {
-        const uintptr_t FireMouseClick = REBASE(0x4737C40);
-        const uintptr_t FireMouseHoverEnter = REBASE(0x4737E50);
-        const uintptr_t FireMouseHoverLeave = REBASE(0x4738040);
-        const uintptr_t FireProximityPrompt = REBASE(0x4773FD0);
-        const uintptr_t FireRightMouseClick = REBASE(0x47382B0);
         const uintptr_t FireTouchInterest = REBASE(0x4BA62E0);
-    }
-
-    namespace Connection
-    {
-        const uintptr_t DisconnectConnection = REBASE(0x1D5DBA0);
     }
 
     namespace RakNet
     {
-        const uintptr_t DeallocatePacket = REBASE(0x325E990);
-        const uintptr_t HandleConnectionState = REBASE(0xAA2320);
-        const uintptr_t ProcessNetworkPacket = REBASE(0x326A4F0);
-        const uintptr_t RakPeerVirtualTable = REBASE(0x62AE320);
-        const uintptr_t Receive = REBASE(0x326F0E0);
-        const uintptr_t ReliabilityLayerSend = REBASE(0x326BD30);
-        const uintptr_t ReportNetworkError = REBASE(0xA96D00);
-        const uintptr_t Send = REBASE(0x326B070);
-        const uintptr_t SharedSend = REBASE(0x326AB20);
+        const uintptr_t ProcessNetworkPacket = REBASE(0x324E020);
+        const uintptr_t RakPeerVirtualTable = REBASE(0x62C0560);
+        const uintptr_t Receive = REBASE(0x32626B0);
+        const uintptr_t ReliabilityLayerSend = REBASE(0x3265250);
     }
 
     namespace DataModel
@@ -195,19 +177,9 @@ namespace Offsets
         constexpr uintptr_t g_weak = 0x10;
     }
 
-    namespace Crash
-    {
-        const uintptr_t RobloxLogCrash = REBASE(0x51402B0);
-    }
-
     namespace Flags
     {
-        const uintptr_t BooleanTypeDescriptor = REBASE(0x6C32558);
-        const uintptr_t CanonicalBooleanTypeDescriptor = REBASE(0x6C326A8);
         const uintptr_t GetFFlag = REBASE(0x5172100);
-        const uintptr_t IntegerTypeDescriptor = REBASE(0x6C32440);
-        const uintptr_t SetFFlag = REBASE(0x5177C40);
-        const uintptr_t StringTypeDescriptor = REBASE(0x6C332A8);
     }
 
     namespace PropertyDescriptor
@@ -229,7 +201,6 @@ namespace Offsets
 
     namespace ClassDescriptor
     {
-        const uintptr_t HashLookup = REBASE(0xE55A2CD);
         constexpr uintptr_t CallbackEntryKindValue = 0x4;
         constexpr uintptr_t PropertyEntryDescriptor = 0x0;
         constexpr uintptr_t PropertyEntryKind = 0x8;
@@ -255,8 +226,7 @@ namespace Offsets
 
     namespace SignalConnection
     {
-        const uintptr_t Disconnect = REBASE(0x5145680);
-        const uintptr_t WaitScriptSlotVirtualTable = REBASE(0x6046320);
+        const uintptr_t WaitScriptSlotVirtualTable = REBASE(0x6031440);
         constexpr uintptr_t Enabled = 0x20;
         constexpr uintptr_t FunctionScriptSlotSelf = 0x18;
         constexpr uintptr_t Next = 0x10;
@@ -302,7 +272,6 @@ namespace Offsets
     namespace ExtraSpace
     {
         constexpr uintptr_t IsCoreScript = 0x168;
-        constexpr uintptr_t RequireBypass = 0x919;
         constexpr uintptr_t ScriptContextToResume = 0x7E8;
     }
 
@@ -320,18 +289,12 @@ namespace Offsets
 
     namespace Touch
     {
-        const uintptr_t FireMouseClick = REBASE(0x4737C40);
-        const uintptr_t FireMouseHoverEnter = REBASE(0x4737E50);
-        const uintptr_t FireMouseHoverLeave = REBASE(0x4738040);
-        const uintptr_t FireProximityPrompt = REBASE(0x4773FD0);
-        const uintptr_t FireRightMouseClick = REBASE(0x47382B0);
         const uintptr_t FireTouchInterest = REBASE(0x4BA62E0);
         const uintptr_t TaskSchedulerTargetFps = REBASE(0x6C36228);
     }
 
     namespace Extra
     {
-        constexpr uintptr_t RequireBypass = 0x919;
         constexpr uintptr_t ScriptContextToResume = 0x7E8;
     }
 
@@ -345,7 +308,7 @@ namespace Offsets
         const uintptr_t TaskCancel = REBASE(0x1E95330);
         const uintptr_t TaskDefer = REBASE(0x202120);
         const uintptr_t TaskDelay = REBASE(0x6A2479);
-        const uintptr_t TaskSpawn = REBASE(0x1E9AC20);
+        const uintptr_t TaskSpawn = REBASE(0x1E96520);
         const uintptr_t TaskWait = REBASE(0x49C1360);
     }
 
