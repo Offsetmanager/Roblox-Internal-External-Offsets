@@ -10,8 +10,8 @@ _You can use api example for auto offsets updater or anything else_
 ***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-145f189a6a974303)_  
 
 # Decrypted Version
-***Future:*** _https://uploadnow.io/f/fJqBNs6_  
-***Current:*** _https://uploadnow.io/f/FPLjrR0_  
+***Future:***  
+***Current:*** _https://uploadnow.io/f/fJqBNs6_  
 
 # Windows
 ***Future player version:***  
