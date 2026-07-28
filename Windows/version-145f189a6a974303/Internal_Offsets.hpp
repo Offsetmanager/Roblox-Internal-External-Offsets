@@ -1,12 +1,13 @@
 #include <cstdint>
 
 // ------------------------------------------------------------
-//  Dumper      : Argus 1.1.5
-//  Owner       : @phantomteam | @kreker757
-//  Version     : version-145f189a6a974303
-//  Failed      : 0
-//  Success     : 191
-//  Total       : 191
+//  Dumper   : Argus 1.3.5
+//  Alert    : This is an experimental dumper, so please verify offsets before use.
+//  Owner    : @phantomteam | @kreker757
+//  Version  : version-145f189a6a974303
+//  Failed   : 0
+//  Success  : 193
+//  Total    : 193
 // ------------------------------------------------------------
 
 namespace Offsets
@@ -33,6 +34,7 @@ namespace Offsets
     const uintptr_t getglobalstate = REBASE(0x1D66A90);
     const uintptr_t loadsafe = REBASE(0x67FC50);
     const uintptr_t luavm__load = REBASE(0xBAB370);
+    const uintptr_t print = REBASE(0x4C27BF0);
 
     namespace Luau
     {
@@ -272,6 +274,7 @@ namespace Offsets
     namespace ExtraSpace
     {
         constexpr uintptr_t IsCoreScript = 0x168;
+        constexpr uintptr_t RequireBypass = 0x0;
         constexpr uintptr_t ScriptContextToResume = 0x7E8;
     }
 
