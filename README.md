@@ -1,5 +1,7 @@
 # Roblox Offsets 2026
 
+***Discord community for pings or just notifications about updates:*** Soon  
+
 # API (Windows Only)
 ***Tested on windows 10 and 11***  
 _You can use api example for auto offsets updater or anything else_  
