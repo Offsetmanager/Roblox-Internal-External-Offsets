@@ -1,6 +1,6 @@
 # Roblox Offsets 2026
 
-***Discord community for pings or just notifications about updates:*** Soon  
+***Discord community for pings or just notifications about updates:*** _[Discord Community](https://discord.gg/2GDauXadDd)_  
 
 # API (Windows Only)
 ***Tested on windows 10 and 11***  
