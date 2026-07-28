@@ -1,4 +1,5 @@
 # Roblox Offsets 2026
+***Argus Dumper experimental so you need verify all struct and internal offsets.***  
 
 # API (Windows Only)
 ***Tested on windows 10 and 11***  
