@@ -1,7 +1,7 @@
 #include <cstdint>
 
 // ------------------------------------------------------------
-//  Dumper   : Argus 1.3.5
+//  Dumper   : Argus 1.3.7
 //  Alert    : This is an experimental dumper, so please verify offsets before use.
 //  Owner    : @phantomteam | @kreker757
 //  Version  : version-145f189a6a974303
