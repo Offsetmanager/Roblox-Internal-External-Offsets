@@ -5,8 +5,8 @@
 //  Owner       : @phantomteam | @kreker757
 //  Version     : version-145f189a6a974303
 //  Failed      : 0
-//  Success     : 200
-//  Total       : 200
+//  Success     : 220
+//  Total       : 220
 // ------------------------------------------------------------
 
 namespace Offsets
@@ -310,5 +310,53 @@ namespace Offsets
     {
         const uintptr_t FastClusterEntityVTable = REBASE(0x5F381C8);
         const uintptr_t FastClusterVTable = REBASE(0x5F31070);
+    }
+
+    namespace Identity
+    {
+        const uintptr_t GetIdentityStruct = REBASE(0x1D508E0);
+        const uintptr_t IdentityPtr = REBASE(0x7A65818);
+    }
+
+    namespace Touch
+    {
+        const uintptr_t FireMouseClick = REBASE(0x4737C40);
+        const uintptr_t FireMouseHoverEnter = REBASE(0x4737E50);
+        const uintptr_t FireMouseHoverLeave = REBASE(0x4738040);
+        const uintptr_t FireProximityPrompt = REBASE(0x4773FD0);
+        const uintptr_t FireRightMouseClick = REBASE(0x47382B0);
+        const uintptr_t FireTouchInterest = REBASE(0x4BA62E0);
+        const uintptr_t TaskSchedulerTargetFps = REBASE(0x6C36228);
+    }
+
+    namespace Extra
+    {
+        constexpr uintptr_t RequireBypass = 0x919;
+        constexpr uintptr_t ScriptContextToResume = 0x7E8;
+    }
+
+    namespace Atom
+    {
+        const uintptr_t KTable = REBASE(0x6C37EF0);
+    }
+
+    namespace Task
+    {
+        const uintptr_t TaskCancel = REBASE(0x1E95330);
+        const uintptr_t TaskDefer = REBASE(0x202120);
+        const uintptr_t TaskDelay = REBASE(0x6A2479);
+        const uintptr_t TaskSpawn = REBASE(0x1E9AC20);
+        const uintptr_t TaskWait = REBASE(0x49C1360);
+    }
+
+    namespace Script
+    {
+        const uintptr_t ScriptContextResume = REBASE(0x4D106B0);
+    }
+
+    namespace Hyperion
+    {
+        const uintptr_t InstrumentationCallback = REBASE(0x14F950);
+        const uintptr_t RobloxEntry = REBASE(0x54BE1F8);
     }
 }
