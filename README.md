@@ -18,7 +18,7 @@ _You can use api example for auto offsets updater or anything else_
 ***Previous player version:*** _version-9affbe66b2624d20_  
 
 # Mac
-***Future player version:***   
+***Future player version:*** _version-d2cc326811844e9e_  
 ***Current player version:*** _version-614a8fd6f9294c9b_  
 ***Previous player version:*** _version-f2083d2275244e01_  
 
