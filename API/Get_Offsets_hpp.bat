@@ -7,7 +7,7 @@ set "TempVers=%TEMP%\rblx_vers_%RANDOM%.hpp"
 set "CurrentVersion=Unknown"
 set "FutureVersion=Unknown"
 
-powershell -NoProfile -Command "$ErrorActionPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $j = (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Offsetmanager/Roblox-Internal-External-Offsets/refs/heads/main/API/version.json') | ConvertFrom-Json; if ($j) { Write-Output ($j.current + ',' + $j.future) }" > "%TempVers%"
+powershell -NoProfile -Command "$ErrorActionPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $j = (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Offsetmanager/Roblox-Internal-External-Offsets/refs/heads/main/API/Server/version.json') | ConvertFrom-Json; if ($j) { Write-Output ($j.current + ',' + $j.future) }" > "%TempVers%"
 
 if exist "%TempVers%" (
     for /f "usebackq tokens=1,2 delims=," %%A in ("%TempVers%") do (
