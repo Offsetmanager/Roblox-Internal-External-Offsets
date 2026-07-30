@@ -7,8 +7,8 @@
 //  Owner    : @phantomteam | @kreker757
 //  Version  : version-145f189a6a974303
 //  Failed   : 0
-//  Success  : 205
-//  Total    : 205
+//  Success  : 214
+//  Total    : 214
 // ------------------------------------------------------------
 
 namespace Offsets
@@ -118,6 +118,19 @@ namespace Offsets
         inline const uintptr_t pusherror = REBASE(0x4B68310);
         inline const uintptr_t tag_error = REBASE(0x4B6A870);
         inline const uintptr_t traversetable = REBASE(0x6376D5);
+    }
+
+    namespace Bytecode
+    {
+        constexpr uint8_t BC_VERSION_MIN = 3;
+        constexpr uint8_t BC_VERSION_MAX = 13;
+        constexpr uint8_t BC_TYPE_VERSION_MIN = 1;
+        constexpr uint8_t BC_TYPE_VERSION_MAX = 3;
+        constexpr uint8_t UD_REMAP_DEFAULT = 0x7;
+        constexpr uint8_t UD_REMAP_COUNT = 32;
+        constexpr uint8_t UD_TAGGED_BASE = 0x40;
+        inline const uintptr_t OPCODE_REMAP_LUT = REBASE(0x6BBD950);
+        inline const uintptr_t OPCODE_ENC_TABLE = REBASE(0x66BB660);
     }
 
     namespace TaskScheduler
