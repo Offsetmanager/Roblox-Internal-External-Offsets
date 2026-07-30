@@ -1,13 +1,14 @@
 #include <cstdint>
+#include "Struct.hpp"
 
 // ------------------------------------------------------------
-//  Dumper   : Argus 1.3.7
+//  Dumper   : Argus 1.5.0
 //  Alert    : This is an experimental dumper, so please verify offsets before use.
 //  Owner    : @phantomteam | @kreker757
 //  Version  : version-145f189a6a974303
 //  Failed   : 0
-//  Success  : 191
-//  Total    : 191
+//  Success  : 205
+//  Total    : 205
 // ------------------------------------------------------------
 
 namespace Offsets
@@ -18,7 +19,7 @@ namespace Offsets
     const uintptr_t GetCurrentThreadId = REBASE(0x5123F60);
     const uintptr_t GetCurrentThreadIdentity = REBASE(0x17D833B);
     const uintptr_t GetIdentityStruct = REBASE(0x4C2CE10);
-    const uintptr_t GetLuaState = REBASE(0x1D56350);
+    const uintptr_t GetLuaState = REBASE(0x1D56360);
     const uintptr_t GetModuleFromVMStateMap = REBASE(0x1DEB700);
     const uintptr_t GetProperty = REBASE(0xA1D677D);
     const uintptr_t GetValues = REBASE(0x1D507B0);
@@ -33,7 +34,7 @@ namespace Offsets
     const uintptr_t coroutine_resume = REBASE(0x1D67CA0);
     const uintptr_t f_luaopen = REBASE(0x70D8C0);
     const uintptr_t getglobalstate = REBASE(0x1D66A90);
-    const uintptr_t loadsafe = REBASE(0x67FC50);
+    const uintptr_t loadsafe = REBASE(0x4B6ECE0);
     const uintptr_t print = REBASE(0x4C27BF0);
 
     namespace Luau
@@ -41,7 +42,7 @@ namespace Offsets
         inline const uintptr_t Luau_Execute = REBASE(0x4B7B430);
         inline const uintptr_t LuaO_NilObject = REBASE(0x6BC0438);
         inline const uintptr_t LuaH_DummyNode = REBASE(0x6BC02C8);
-        inline const uintptr_t LuaVMLoad = REBASE(0x1D9FF00);
+        inline const uintptr_t LuaVMLoad = REBASE(0x4B6EA30);
         inline const uintptr_t LuaD_Throw = REBASE(0x4B68390);
     }
 
@@ -274,12 +275,6 @@ namespace Offsets
     namespace VirtualTable
     {
         constexpr uintptr_t RaiseEventInvocation = 0x18;
-    }
-
-    namespace ExtraSpace
-    {
-        constexpr uintptr_t IsCoreScript = 0x168;
-        constexpr uintptr_t ScriptContextToResume = 0x7E8;
     }
 
     namespace VTables
