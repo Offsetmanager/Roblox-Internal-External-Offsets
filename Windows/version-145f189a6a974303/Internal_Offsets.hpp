@@ -2,13 +2,13 @@
 #include "Struct.hpp"
 
 // ------------------------------------------------------------
-//  Dumper   : Argus 1.5.0
+//  Dumper   : Argus 1.5.5
 //  Alert    : This is an experimental dumper, so please verify offsets before use.
 //  Owner    : @phantomteam | @kreker757
 //  Version  : version-145f189a6a974303
 //  Failed   : 0
-//  Success  : 214
-//  Total    : 214
+//  Success  : 223
+//  Total    : 223
 // ------------------------------------------------------------
 
 namespace Offsets
@@ -22,6 +22,8 @@ namespace Offsets
     const uintptr_t GetLuaState = REBASE(0x1D56360);
     const uintptr_t GetModuleFromVMStateMap = REBASE(0x1DEB700);
     const uintptr_t GetProperty = REBASE(0xA1D677D);
+    const uintptr_t GetPropertyData = REBASE(0xC8ACA0);
+    const uintptr_t GetTLSPointer = REBASE(0x80E0);
     const uintptr_t GetValues = REBASE(0x1D507B0);
     const uintptr_t IdentityPtr = REBASE(0x8392B28);
     const uintptr_t Impersonator = REBASE(0x512B690);
@@ -152,15 +154,22 @@ namespace Offsets
 
     namespace Input
     {
+        const uintptr_t FireMouseClick = REBASE(0x26ADEE0);
+        const uintptr_t FireMouseHoverEnter = REBASE(0x26AE0F0);
+        const uintptr_t FireMouseHoverLeave = REBASE(0x26AE2E0);
+        const uintptr_t FireProximityPrompt = REBASE(0x26B7440);
         const uintptr_t FireTouchInterest = REBASE(0x2B25900);
     }
 
     namespace RakNet
     {
+        const uintptr_t HandleConnectionState = REBASE(0xA49490);
         const uintptr_t ProcessNetworkPacket = REBASE(0x324E020);
         const uintptr_t RakPeerVirtualTable = REBASE(0x62C0560);
-        const uintptr_t Receive = REBASE(0x32626B0);
-        const uintptr_t ReliabilityLayerSend = REBASE(0x3265250);
+        const uintptr_t Receive = REBASE(0x32529A0);
+        const uintptr_t ReliabilityLayerSend = REBASE(0x324F860);
+        const uintptr_t ReportNetworkError = REBASE(0xA3DEA0);
+        const uintptr_t Send = REBASE(0x324E650);
     }
 
     namespace DataModel
