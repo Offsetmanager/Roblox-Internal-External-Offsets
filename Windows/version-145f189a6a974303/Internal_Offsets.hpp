@@ -2,9 +2,9 @@
 #include "Struct.hpp"
 
 // ------------------------------------------------------------
-//   Dumper   : Argus 2.0.0 (Internal Offsets)
-//   Alert    : This is an experimental dumper, so please verify offsets before use.
-//   Owner    : @phantomteam | @kreker757
+//  Dumper   : Argus 2.0.5 (Internal Offsets)
+//  Alert    : This is an experimental dumper, so please verify offsets before use.
+//  Owner    : @phantomteam | @kreker757
 //  Version  : version-145f189a6a974303
 //  Failed   : 0
 //  Success  : 156
@@ -21,7 +21,7 @@ namespace Offsets
     const uintptr_t GetCurrentThreadIdentity = REBASE(0x17D833B);
     const uintptr_t GetGlobalState = REBASE(0x1D56360);
     const uintptr_t GetIdentityStruct = REBASE(0x4C2CE10);
-    const uintptr_t GetLuaState = REBASE(0x1E54CF0);
+    const uintptr_t GetLuaState = REBASE(0x1D56360);
     const uintptr_t GetModuleFromVMStateMap = REBASE(0x1DEB700);
     const uintptr_t GetProperty = REBASE(0xA1D677D);
     const uintptr_t GetPropertyData = REBASE(0xC8ACA0);
@@ -31,7 +31,7 @@ namespace Offsets
     const uintptr_t IentityToCaps = REBASE(0x4C2D260);
     const uintptr_t Impersonator = REBASE(0x512B690);
     const uintptr_t NewInstance = REBASE(0xAB98C0);
-    const uintptr_t OpCodeLookupTable = REBASE(0x66BB660);
+    const uintptr_t OpCodeLookupTable = REBASE(0x639F7B0);
     const uintptr_t PushInstance = REBASE(0x1D48CA0);
     const uintptr_t ScriptContextResume = REBASE(0x1E21510);
     const uintptr_t SetFFlag = REBASE(0x5172100);
