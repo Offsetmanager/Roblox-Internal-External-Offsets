@@ -1,174 +1,155 @@
-#include <cstdint>
-#include "Struct.hpp"
-
-// ------------------------------------------------------------
-//  Dumper   : Argus 2.0.5 (Internal Offsets)
-//  Alert    : This is an experimental dumper, so please verify offsets before use.
-//  Owner    : @phantomteam | @kreker757
-//  Version  : version_d584fb6c717a43d9
-//  Failed   : 17
-//  Success  : 88
-//  Total    : 105
-// ------------------------------------------------------------
+#pragma once
+#define REBASE(addr)(addr+reinterpret_cast<uintptr_t>(GetModuleHandleA(nullptr)))
 
 namespace Offsets
 {
-    const uintptr_t AppdataInfo = REBASE(0x689D608);
-    const uintptr_t DisconnectConnect = REBASE(0x2291CD0);
-    const uintptr_t GetCapabilities = REBASE(0x329C1E4);
-    const uintptr_t GetContextObject = REBASE(0x2251160);
-    const uintptr_t GetCurrentThreadId = REBASE(0x2C81420);
-    const uintptr_t GetIdentityStruct = REBASE(0xDB6EA2);
-    const uintptr_t GetLuaState = REBASE(0x2302B70);
-    const uintptr_t GetLuaStateForInstance = REBASE(0x799660);
-    const uintptr_t GetModuleFromVMStateMap = REBASE(0x2335A00);
-    const uintptr_t GetProperty = REBASE(0xA70949D);
-    const uintptr_t GetTLSPointer = REBASE(0x40E0);
-    const uintptr_t IdentityPtr = REBASE(0x8370708);
-    const uintptr_t PushInstance = REBASE(0x2B03550);
-    const uintptr_t ScriptContextResume = REBASE(0x23F11E0);
-    const uintptr_t SetFFlag = REBASE(0x2CA6760);
-    const uintptr_t f_luaopen = REBASE(0x955D90);
+    const uintptr_t Print=REBASE(0x91F9A0);
+    const uintptr_t OpcodeLookupTable=REBASE(0x610B760);
+    const uintptr_t LuaVMLoad=REBASE(0x946650);
 
-    namespace reflections
+    namespace Reflection
     {
-        const uintptr_t CastArgs = REBASE(0x977900);
+        const uintptr_t GetProperty=REBASE(0x7B3970);
+        const uintptr_t GetPropertyData=REBASE(0xD65CD0);
+        const uintptr_t KTable=REBASE(0x7E73AE0);
+        const uintptr_t CastArgs=REBASE(0x2234DD0);
+        const uintptr_t TType=0x68;
+        const uintptr_t TTypeNumber=0x30;
+        const uintptr_t GetSet=0x90;
     }
-
-    namespace Luau
-    {
-        inline const uintptr_t Luau_Execute = REBASE(0x95E8C0);
-        inline const uintptr_t LuaO_NilObject = REBASE(0x610B898);
-        inline const uintptr_t LuaH_DummyNode = REBASE(0x610B760);
-        inline const uintptr_t LuaVMLoad = REBASE(0x21DB510);
-        inline const uintptr_t LuaD_Throw = REBASE(0x945D80);
-    }
-
-    namespace Lua
-    {
-        inline const uintptr_t LuaT_Eventnames = REBASE(0x610B808);
-        inline const uintptr_t LuaT_typenames = REBASE(0x610B780);
-        inline const uintptr_t atomic = REBASE(0x82B8C0);
-        inline const uintptr_t currentline = REBASE(0x3659DE0);
-        inline const uintptr_t luaA_toobject = REBASE(0x937CC0);
-        inline const uintptr_t luaB_assert = REBASE(0x9EB8C0);
-        inline const uintptr_t luaD_rawrunprotected = REBASE(0x945D50);
-        inline const uintptr_t luaF_freeproto = REBASE(0x955D90);
-        inline const uintptr_t luaG_runerrorL = REBASE(0x978940);
-        inline const uintptr_t luaL_argerrorL = REBASE(0x93B840);
-        inline const uintptr_t luaL_tolstring = REBASE(0x80E650);
-        inline const uintptr_t luaL_typerrorL = REBASE(0x93B8C0);
-        inline const uintptr_t luaL_where = REBASE(0x1922E0);
-        inline const uintptr_t luaM_free_ = REBASE(0x954790);
-        inline const uintptr_t luaM_freegco_ = REBASE(0x9546E0);
-        inline const uintptr_t luaM_visitgco = REBASE(0x954930);
-        inline const uintptr_t luaO_pushfstring = REBASE(0x248C9A0);
-        inline const uintptr_t luaO_pushvfstring = REBASE(0x858FC0);
-        inline const uintptr_t lua_eception = REBASE(0x945BF0);
-        inline const uintptr_t lua_newstate = REBASE(0x936AB0);
-        inline const uintptr_t lua_newthread = REBASE(0x937DA0);
-        inline const uintptr_t lua_pcall = REBASE(0x94C250);
-        inline const uintptr_t lua_pushfstringL = REBASE(0x9390D0);
-        inline const uintptr_t lua_pushstring = REBASE(0x94BEC0);
-        inline const uintptr_t lua_pushvfstring = REBASE(0x939060);
-        inline const uintptr_t newblock = REBASE(0x954650);
-        inline const uintptr_t newclasspage = REBASE(0x954540);
-        inline const uintptr_t newpage = REBASE(0x954490);
-        inline const uintptr_t pseudoaddr = REBASE(0x937C00);
-        inline const uintptr_t traversetable = REBASE(0x5FB365);
-    }
-
-    namespace TaskScheduler
-    {
-        const uintptr_t PhysicsSenderMaxBandwidthBps = REBASE(0x6CE61F8);
-        const uintptr_t RawScheduler = REBASE(0x7A9A3F0);
-        const uintptr_t TaskDesynchronize = REBASE(0x23F5C00);
-        const uintptr_t TaskSchedulerPointer = REBASE(0x7A9A3F0);
-        const uintptr_t TaskSchedulerTargetFps = REBASE(0x7EDB2B8);
-        const uintptr_t TaskSpawn = REBASE(0x23F6D60);
-        const uintptr_t TaskSynchronize = REBASE(0x23F5620);
-        const uintptr_t task_defer = REBASE(0x23F68E0);
-    }
-
-    namespace Actor
-    {
-        const uintptr_t TaskDesynchronize = REBASE(0x23F5C00);
-        const uintptr_t TaskSynchronize = REBASE(0x23F5620);
-    }
-
-    namespace Input
-    {
-        const uintptr_t FireClient = REBASE(0x4EADCC0);
-        const uintptr_t FireServer = REBASE(0x4EADB20);
-        const uintptr_t FireTouchInterest = REBASE(0x2D76340);
-    }
-
-    namespace Connection
-    {
-        const uintptr_t DisconnectConnect = REBASE(0x2291CD0);
-    }
-
-    namespace RakNet
-    {
-        const uintptr_t ProcessNetworkPacket = REBASE(0x4296E30);
-        const uintptr_t RakPeerVirtualTable = REBASE(0x71B47F4);
-        const uintptr_t Receive = REBASE(0x4268CE0);
-        const uintptr_t ReliabilityLayerSend = REBASE(0x4266840);
-        const uintptr_t ReportNetworkError = REBASE(0x376AC70);
-    }
-
-    namespace Capabilities
-    {
-        const uintptr_t GetCapabilities = REBASE(0x329C1E4);
-        constexpr uintptr_t Capabilities = 0x28;
-    }
-
-    namespace GarbageCollector
-    {
-        constexpr uintptr_t L_singlestep = 0x4;
-    }
-
-    namespace Flags
-    {
-        const uintptr_t GetFFlag = REBASE(0x2C9EEB0);
-    }
-
-    namespace SignalConnection
-    {
-        const uintptr_t WaitScriptSlotVirtualTable = REBASE(0x707AB24);
-    }
-
-    namespace VTables
-    {
-        const uintptr_t FastClusterEntityVTable = REBASE(0x6F99C94);
-        const uintptr_t FastClusterVTable = REBASE(0x6F96B1C);
-    }
-
     namespace Identity
     {
-        const uintptr_t GetIdentityStruct = REBASE(0xDB6EA2);
-        const uintptr_t IdentityPtr = REBASE(0x8370708);
+        const uintptr_t GetCapabilities=REBASE(0x8EB520);
     }
-
-    namespace Touch
-    {
-        const uintptr_t FireTouchInterest = REBASE(0x2D76340);
-        const uintptr_t TaskSchedulerTargetFps = REBASE(0x7EDB2B8);
-    }
-
-    namespace Atom
-    {
-        const uintptr_t KTable = REBASE(0x7E73AE0);
-    }
-
-    namespace Task
-    {
-        const uintptr_t TaskDefer = REBASE(0x23F68E0);
-        const uintptr_t TaskSpawn = REBASE(0x23F6D60);
-    }
-
     namespace Script
     {
-        const uintptr_t ScriptContextResume = REBASE(0x23F11E0);
+        const uintptr_t ScriptContextResume=REBASE(0x22FA7B0);
+        const uintptr_t ScriptContextToResume=0x7D0;
+        const uintptr_t RequireBypass=0x800;
+    }
+    namespace TaskScheduler
+    {
+        const uintptr_t JobStart=0xC8;
+        const uintptr_t JobEnd=0xD0;
+        const uintptr_t JobName=0x18;
+    }
+    namespace Actor
+    {
+        const uintptr_t ParallelFlag=0x100;
+        const uintptr_t TaskDesynchronize=REBASE(0x23F5C00);
+        const uintptr_t TaskSynchronize=REBASE(0x23F5620);
+    }
+    namespace Task
+    {
+        const uintptr_t Delay=REBASE(0x23F70D0);
+        const uintptr_t Desynchronize=REBASE(0x23F5C00);
+        const uintptr_t Spawn=REBASE(0x23F6D60);
+        const uintptr_t Sync=REBASE(0x23F5620);
+        const uintptr_t Wait=REBASE(0x23F73C0);
+    }
+    namespace Input
+    {
+        const uintptr_t FireProximityPrompt=REBASE(0x4D92DA0);
+        const uintptr_t FireTouchInterest=REBASE(0x1EA41F0);
+    }
+    namespace Luau
+    {
+        const uintptr_t Luau_Execute=REBASE(0x95E8C0);
+        const uintptr_t LuaD_Throw=REBASE(0x945D80);
+    }
+
+    namespace DataModel
+    {
+        const uintptr_t GameLoaded=0x578;
+        const uintptr_t PlaceId=0x190;
+    }
+    namespace Instance
+    {
+        const uintptr_t PropertyDescriptorBitFlags=0x8C;
+        const uintptr_t ScriptableMask=0x10;
+        const uintptr_t ClassDescriptor=0x18;
+        const uintptr_t ClassName=0x8;
+        const uintptr_t Children=0x70;
+        const uintptr_t ChildrenStart=0x70;
+        const uintptr_t ChildrenEnd=0x8;
+        const uintptr_t Name=0xB0;
+        const uintptr_t Overlap=0x1F8;
+    }
+    namespace BasePart
+    {
+        const uintptr_t Primitive=0x128;
+        const uintptr_t Overlap=0x1F8;
+    }
+    namespace Bytecode
+    {
+        const uintptr_t Pointer=0x10;
+        const uintptr_t Size=0x20;
+        namespace LocalScript
+        {
+            const uintptr_t ByteCode=0x190;
+            const uintptr_t Hash=0x1A0;
+        }
+        namespace ModuleScript
+        {
+            const uintptr_t ByteCode=0x138;
+            const uintptr_t Hash=0x148;
+        }
+    }
+    namespace Render
+    {
+        const uintptr_t RenderJobToView=0x1D0;
+        const uintptr_t RenderViewToDevice=0x8;
+        const uintptr_t SwapChain=0xC8;
+    }
+    namespace Signal
+    {
+        const uintptr_t DisconnectConnectOrWasItConnectDisconnect=REBASE(0x2291CD0);
+        namespace Connection
+        {
+            const uintptr_t Next=0x10;
+            const uintptr_t Enabled=0x20;
+            const uintptr_t Wrapper=0x30;
+            const uintptr_t Self=0x38;
+        }
+        namespace Wrapper
+        {
+            const uintptr_t Thread=0x28;
+            const uintptr_t Function=0x34;
+            const uintptr_t Weak=0x60;
+            const uintptr_t WeakFallback=0x38;
+            const uintptr_t Fallback=0x48;
+        }
+        namespace Getter
+        {
+            const uintptr_t Chain=0x68;
+            const uintptr_t Self=0x18;
+            const uintptr_t Container=0x50;
+            const uintptr_t ContainerThread=0x28;
+        }
+    }
+    namespace RakNet
+    {
+        const uintptr_t HandleConnectionState=REBASE(0x287A4F0);
+        const uintptr_t ProcessNetworkPacket=REBASE(0x4296E30);
+        const uintptr_t ProcessPacket=REBASE(0x27FCD30);
+        const uintptr_t ReportNetworkError=REBASE(0x28829E0);
+        const uintptr_t JobPeerSharedPtr=0x1D0;
+        const uintptr_t JobPeerEmbedded=0x218;
+        const uintptr_t SendSharedVtableIndex=0x14;
+        const uintptr_t StreamDataPtr=0x10;
+        const uintptr_t StreamBytesUsed=0x30;
+        const uintptr_t PacketBytesUsed=0x30;
+        const uintptr_t PacketDataPtr=0x38;
+        namespace Remote
+        {
+            const uintptr_t Size=0x1E0;
+            const uintptr_t Address=0x10;
+            const uintptr_t Port=0x14;
+            const uintptr_t State=0x30;
+            const uintptr_t Ping=0x38;
+            const uintptr_t Ping2=0x3C;
+            const uintptr_t Ping3=0x40;
+            const uintptr_t Ping4=0x44;
+        }
     }
 }
