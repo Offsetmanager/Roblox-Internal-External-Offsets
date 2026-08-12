@@ -15,9 +15,9 @@ _You can use api example for auto offsets updater or anything else_
 ***Previous player version:*** _version-145f189a6a974303_  
 
 # Mac
-***Future player version:*** _version-89863375b5194afb_  
-***Current player version:*** _version-897f957153bd4d18_  
-***Previous player version:*** _version-d2cc326811844e9e_  
+***Future player version:***  
+***Current player version:*** _version-89863375b5194afb_  
+***Previous player version:*** _version-897f957153bd4d18_  
 
 # Credits
 ***Theo offsets***  
