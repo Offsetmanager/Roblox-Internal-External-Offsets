@@ -1,5 +1,6 @@
 # Roblox Offsets 2026
-***Argus Dumper experimental so you need verify all struct and internal offsets from them.***  
+> [!CAUTION]
+> ***Argus Dumper experimental so you need verify all struct and internal offsets from them.***  
 
 # API (Windows Only)
 ***Tested on windows 10 and 11***  
@@ -18,6 +19,22 @@ _You can use api example for auto offsets updater or anything else_
 ***Future player version:***  
 ***Current player version:*** _version-31dba3b2537245ce_  
 ***Previous player version:*** _version-e2eb38281d264ca4_  
+
+# Versions history
+
+<details>
+<summary><b>Windows</b></summary>
+
+_version-17d504d2c9544583 | 26.08.2026_  
+
+</details>
+
+<details>
+<summary><b>Mac</b></summary>
+
+_version-31dba3b2537245ce | 25.08.2026_  
+
+</details>
 
 # Credits
 ***Theo offsets***  
