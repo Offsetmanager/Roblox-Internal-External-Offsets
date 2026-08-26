@@ -1,6 +1,7 @@
 # Roblox Offsets 2026
 > [!CAUTION]
 > ***Argus Dumper experimental so you need verify all struct and internal offsets from them.***
+
 > [!NOTE]
 > _[GitLab Version](https://gitlab.com/Offsetmanager/Roblox-Internal-External-Offsets/)_  
 
