@@ -10,7 +10,7 @@
 
 namespace Offsets
 {
-    const uintptr_t Print = REBASE(0x1C6A390);
+    const uintptr_t Print = REBASE(0x1C6A390); //verified
     const uintptr_t LuaVMLoad = REBASE(0x269C3E0);
     const uintptr_t GetCurrentThreadId = REBASE(0x4777820);
 
