@@ -2,7 +2,7 @@
 > [!CAUTION]
 > ***Argus Dumper experimental so you need verify all struct and internal offsets from them.***
 
-> [!NOTE]
+> [!NOTE1]
 > _[GitLab Version](https://gitlab.com/Offsetmanager/Roblox-Internal-External-Offsets/)_  
 
 # API (Windows Only)
