@@ -20,7 +20,7 @@
 ***Previous player version:*** _version-ddf602d9cfe44005_  
 
 # Mac
-***Future player version:***  
+***Future player version:*** _version-4c4fc877ca9b4c61_  
 ***Current player version:*** _version-31dba3b2537245ce_  
 ***Previous player version:*** _version-e2eb38281d264ca4_  
 
