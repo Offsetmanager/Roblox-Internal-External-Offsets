@@ -36,7 +36,7 @@ _version-17d504d2c9544583 | 26.08.2026_
 <details>
 <summary><b>Mac</b></summary>
 
-_version-4c4fc877ca9b4c61 | 27.08.2026_
+_version-4c4fc877ca9b4c61 | 27.08.2026_  
 _version-31dba3b2537245ce | 25.08.2026_  
 
 </details>
