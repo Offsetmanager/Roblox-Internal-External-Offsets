@@ -11,13 +11,13 @@
 > _You can use api example for auto offsets updater or anything else_  
 
 # Links
-***Windows:*** _[Future](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-f5a60436d48947d3)_  
-***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-17d504d2c9544583)_  
+***Windows:*** _[Future]_  
+***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-f5a60436d48947d3)_  
 
 # Windows
-***Future player version:*** _version-f5a60436d48947d3_  
-***Current player version:*** _version-17d504d2c9544583_  
-***Previous player version:*** _version-ddf602d9cfe44005_  
+***Future player version:***  
+***Current player version:*** _version-f5a60436d48947d3_  
+***Previous player version:*** _version-17d504d2c9544583_  
 
 # Mac
 ***Future player version:***  
@@ -29,6 +29,7 @@
 <details>
 <summary><b>Windows</b></summary>
 
+_version-f5a60436d48947d3 | 28.08.2026_  
 _version-17d504d2c9544583 | 26.08.2026_  
 
 </details>
