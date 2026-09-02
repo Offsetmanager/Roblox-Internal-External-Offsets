@@ -2,25 +2,22 @@
 > [!CAUTION]
 > ***Argus Dumper experimental so you need verify all struct and internal offsets from them.***
 
-> [!NOTE]
-> _[GitLab Version](https://gitlab.com/Offsetmanager/Roblox-Internal-External-Offsets/)_  
-
 # API (Windows Only)
 > [!TIP]
 > ***Tested on windows 10 and 11***  
 > _You can use api example for auto offsets updater or anything else_  
 
 # Links
-***Windows:*** _[Future]_  
+***Windows:*** _[Future](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-e7d81637d42c4b23)_  
 ***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-f5a60436d48947d3)_  
 
 # Windows
-***Future player version:***  
+***Future player version:*** _version-e7d81637d42c4b23_  
 ***Current player version:*** _version-f5a60436d48947d3_  
 ***Previous player version:*** _version-17d504d2c9544583_  
 
 # Mac
-***Future player version:***  
+***Future player version:*** _version-2a3a7efa1a934799_  
 ***Current player version:*** _version-4c4fc877ca9b4c61_  
 ***Previous player version:*** _version-31dba3b2537245ce_  
 
