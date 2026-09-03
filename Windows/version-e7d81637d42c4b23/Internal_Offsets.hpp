@@ -1,93 +1,320 @@
-// ------------------------------------------------------------
-//  Dumper      : Argus 3.1 (Internal Offsets)
-//  Alert       : This is an experimental dumper, so please verify offsets before use.
-//  Owner       : @phantomteam | @kreker757
-//  Version     : version-e7d81637d42c4b23
-//  Time Taken  : 15s
-// ------------------------------------------------------------
-#pragma once
-#define REBASE(addr)(addr+reinterpret_cast<uintptr_t>(GetModuleHandleA(nullptr)))
+#include <Windows.h>
 
-namespace Offsets
-{
-    const uintptr_t Print = REBASE(0x1C8A050);
-    const uintptr_t LuaVMLoad = REBASE(0x310B990);
-    const uintptr_t GetCurrentThreadId = REBASE(0x47CE550);
+#define REBASE_RBX(x) ((ULONGLONG)GetModuleHandle(0) + x)
+#define REBASE_HYPERION(x) ((ULONGLONG)GetModuleHandle("RobloxPlayerBeta.dll") + x)
+struct lua_State;
 
-    namespace Reflection
-    {
-    const uintptr_t GetProperty = REBASE(0x46F2BC0);
-    const uintptr_t CastArgs = REBASE(0x3FDE600);
-    const uintptr_t GetValues = REBASE(0xF8AD70);
-    }
+namespace RBX {
+    const ULONGLONG Print = REBASE_RBX(0x1c8a050);
+    const ULONGLONG LuaVM_Load = REBASE_RBX(0x406e600);
+    const ULONGLONG epochTime = REBASE_RBX(0x47cec30);
+    const ULONGLONG get_tss_dataOffset = REBASE_RBX(0x39a0);
+    inline auto get_tss_data = (ULONGLONG(__fastcall*)(ULONGLONG TLS))get_tss_dataOffset;
+    const ULONGLONG TLS_VMLOADTIMER = REBASE_RBX(0x83f7600);
+    const ULONGLONG TLS_IDENTITYSTRUCT = REBASE_RBX(0x80c10c8);
+    const ULONGLONG LuaD_ThrowOffset = REBASE_RBX(0x26d4690);
+    inline auto LuaDThrow = (void(__fastcall*)(lua_State*, int))LuaD_ThrowOffset;
+    const ULONGLONG GetCapabilitiesOffset = REBASE_RBX(0x1cc5820);
+    inline auto GetCapabilities = (ULONGLONG(__fastcall*)(int*))GetCapabilitiesOffset;
+    const ULONGLONG TaskSynchronize = REBASE_RBX(0x41d2980);
+    const ULONGLONG TaskDesynchronize = REBASE_RBX(0x41d2d90);
+    const ULONGLONG TaskDefer = REBASE_RBX(0x41d3960);
+    const ULONGLONG TaskSpawn = REBASE_RBX(0x41d3df0);
+    const ULONGLONG TaskDelay = REBASE_RBX(0x41d4160);
+    const ULONGLONG TaskWait = REBASE_RBX(0x41d4460);
+    const ULONGLONG TaskCancel = REBASE_RBX(0x41d46d0);
+    const ULONGLONG Luau_ExecuteOffset = REBASE_RBX(0x26e4530);
+    inline auto Luau_Execute = (void(__fastcall*)(lua_State*))Luau_ExecuteOffset;
+    const ULONGLONG OpCodeLookupTable = REBASE_RBX(0x6da2370);
+    const ULONGLONG EnableLoadModule = REBASE_RBX(0x83f7bf8);
+    const ULONGLONG LockViolationInstanceCrash = REBASE_RBX(0x84a33c0);
+    const ULONGLONG LockViolationScriptCrash = REBASE_RBX(0x83f7958);
+    const ULONGLONG TaskSchedulerTargetFps = REBASE_RBX(0x8109de8);
+    const ULONGLONG GetLuaState = REBASE_RBX(0x40fc450);
+    const ULONGLONG SC2LS = 0x5c0;
+    const ULONGLONG RequireBypass = 0xb01;
+    const ULONGLONG IsCoreScript = 0x168;
+    const ULONGLONG pTaskScheduler = REBASE_RBX(0x8abd728);
+    const ULONGLONG KTable = REBASE_RBX(0x801f560);
+    const ULONGLONG GetPropertyDescriptorOffset = REBASE_RBX(0x1cc3c50);
+    inline auto GetPropertyDescriptorIndex = (ULONG * (__fastcall*)(ULONGLONG, ULONGLONG * empty, ULONGLONG*))GetPropertyDescriptorOffset;
+    namespace Property {
+        constexpr ULONG typeNum = 0x30;
+        constexpr ULONG typeInfo = 0x68;
+        constexpr ULONG isScriptable = 0x8c;
+        constexpr ULONG getSet = 0x90;
+        constexpr ULONG CDesc2PDesc = 0x1d8;
+    };
+    const ULONGLONG vftNetworkStream = REBASE_RBX(0x6b18cb0);
+    namespace Instance {
+        constexpr ULONG childrenStart = 0x0;
+        constexpr ULONG childrenEnd = 0x8;
+        constexpr ULONG Class = 0x18;
+        constexpr ULONG Parent = 0x68;
+        constexpr ULONG Name = 0x70;
+        constexpr ULONG Children = 0x78;
+    };
+    namespace TaskScheduler {
+        constexpr ULONG JobsStart = 0xc8;
+        constexpr ULONG JobsEnd = 0xd0;
+        constexpr ULONG ScriptContext = 0x1b8;
+    };
+    namespace TaskSchedulerJob {
+        constexpr ULONG JobName = 0x18;
+        constexpr ULONG JobTypeName = 0xf8;
+    };
+    namespace RakNet {
+        constexpr ULONG Job2RakPeer = 0x1d8;
+        constexpr ULONG RakPeerVTableSize = 0x3e0;
+        constexpr ULONG idx_Connect = 13;
+        constexpr ULONG idx_Send = 20;
+        constexpr ULONG idx_Recieve = 25;
+        const ULONGLONG convertItemEnumToString = REBASE_RBX(0x460f980);
+    };
+    const ULONGLONG SC2Resume = 0x9e0;
+    const ULONGLONG SCResumeOffset = REBASE_RBX(0x4115130);
+    inline auto ScriptContextResume = (ULONGLONG(__fastcall*)(ULONGLONG, void*, void*, int, char, ULONGLONG))SCResumeOffset; //(ScriptContext+SC2LS, pDebuggerResult (20 byte struct of 0's), LiveThreadRef, Return, zero?, zero?)
+    const ULONGLONG RBXCrashPtr = REBASE_RBX(0x87de698);
+    typedef ULONGLONG(__fastcall* RBXCrash_t)(const char*, ULONGLONG);
+    const ULONGLONG FLogHookPtr = REBASE_RBX(0x87de6a8);
+    typedef ULONGLONG(__fastcall* FLogHookPtr_t)(void* thing1, BYTE level, const char* message);
+    const ULONGLONG PushInstanceOffset = REBASE_RBX(0x40608a0);
+    inline auto PushInstance = (ULONGLONG * (__fastcall*)(lua_State*, ULONGLONG))PushInstanceOffset;
+    const ULONGLONG FireTouchInterestOffset = REBASE_RBX(0xa5fae0);
+    inline auto FireTouchInterest = (void(__fastcall*)(ULONGLONG, ULONGLONG, ULONGLONG, bool, bool))FireTouchInterestOffset;
+    namespace BasePart {
+        constexpr ULONG Primitive = 0x188;
+        constexpr ULONG Overlap = 0x1f8;
+    };
+    const ULONGLONG FireProximityPromptOffset = REBASE_RBX(0x7b4230);
+    inline auto FireProximityPrompt = (ULONGLONG * (__thiscall*)(ULONGLONG))FireProximityPromptOffset;
+    const ULONGLONG FireRightMouseClick = REBASE_RBX(0x3b079c0);
+    const ULONGLONG FireMouseClick = REBASE_RBX(0x3b07820);
+    const ULONGLONG FireMouseHover = REBASE_RBX(0x3b08e10);
+    const ULONGLONG FireMouseHoverLeave = REBASE_RBX(0x3b08fb0);
+    const ULONGLONG vftFuncScriptSlot0 = REBASE_RBX(0x6bfd678);
+    const ULONGLONG vftFuncScriptSlot1 = REBASE_RBX(0x6bfd838);
+    const ULONGLONG vftMessageScriptSlot = REBASE_RBX(0x6bfd478);
+    const ULONGLONG vftWaitScriptSlot = REBASE_RBX(0x6bfd5a0);
+    const ULONGLONG CastArgsOffset = REBASE_RBX(0x3fde600);
+    inline auto CastArgs = (ULONGLONG(__fastcall*)(lua_State*, int, void*, bool, int))CastArgsOffset;
+    const ULONGLONG LuaT_typenames = REBASE_RBX(0x636d980);
+    const ULONGLONG LuaT_eventname = REBASE_RBX(0x636d9f0);
+    const ULONGLONG LuaH_dummynode = REBASE_RBX(0x6351188);
+    const ULONGLONG luaB_assert = REBASE_RBX(0x27129c0);
+    const ULONGLONG luaB_error = REBASE_RBX(0x270d6d0);
+    const ULONGLONG luaB_gcinfo = REBASE_RBX(0x2711300);
+    const ULONGLONG luaB_getfenv = REBASE_RBX(0x270ed00);
+    const ULONGLONG luaB_getmetatable = REBASE_RBX(0x270e110);
+    const ULONGLONG luaB_next = REBASE_RBX(0x2711f10);
+    const ULONGLONG luaB_newproxy = REBASE_RBX(0x27138e0);
+    const ULONGLONG luaB_print = REBASE_RBX(0x270d270);
+    const ULONGLONG luaB_rawequal = REBASE_RBX(0x270eff0);
+    const ULONGLONG luaB_rawget = REBASE_RBX(0x270f100);
+    const ULONGLONG luaB_rawset = REBASE_RBX(0x270f650);
+    const ULONGLONG luaB_rawlen = REBASE_RBX(0x2711260);
+    const ULONGLONG luaB_select = REBASE_RBX(0x2712a70);
+    const ULONGLONG luaB_setfenv = REBASE_RBX(0x270edc0);
+    const ULONGLONG luaB_setmetatable = REBASE_RBX(0x270e290);
+    const ULONGLONG luaB_tonumber = REBASE_RBX(0x270d340);
+    const ULONGLONG luaB_tostring = REBASE_RBX(0x2713880);
+    const ULONGLONG luaB_type = REBASE_RBX(0x2711320);
+    const ULONGLONG luaB_typeof = REBASE_RBX(0x2711920);
+    const ULONGLONG LuaO_nilobject = REBASE_RBX(0x63516d8);
+    const ULONGLONG luaC_step = REBASE_RBX(0x26e3260);
+    inline auto LuaC_step = (ULONGLONG(__fastcall*)(lua_State*, bool))luaC_step;
+    enum ReflectionType : int {
+        Type_Void = 0x0,
+        Type_Bool = 0x1,
+        Type_Int = 0x2,
+        Type_Int64 = 0x3,
+        Type_Float = 0x4,
+        Type_Double = 0x5,
+        Type_String = 0x6,
+        Type_ProtectedString = 0x7,
+        Type_Instance = 0x8,
+        Type_Instances = 0x9,
+        Type_Ray = 0xa,
+        Type_Vector2 = 0xb,
+        Type_Vector3 = 0xc,
+        Type_Vector2Int16 = 0xd,
+        Type_Vector3Int16 = 0xe,
+        Type_Rect2d = 0xf,
+        Type_CoordinateFrame = 0x10,
+        Type_Color3 = 0x11,
+        Type_Color3uint8 = 0x12,
+        Type_UDim = 0x13,
+        Type_UDim2 = 0x14,
+        Type_Faces = 0x15,
+        Type_Axes = 0x16,
+        Type_Region3 = 0x17,
+        Type_Region3Int16 = 0x18,
+        Type_CellId = 0x19,
+        Type_GuidData = 0x1a,
+        Type_PhysicalProperties = 0x1b,
+        Type_BrickColor = 0x1c,
+        Type_SystemAddress = 0x1d,
+        Type_BinaryString = 0x1e,
+        Type_Surface = 0x1f,
+        Type_CollectionHandle = 0x20,
+        Type_Enum = 0x21,
+        Type_Property = 0x22,
+        Type_Tuple = 0x23,
+        Type_ValueArray = 0x24,
+        Type_ValueTable = 0x25,
+        Type_ValueMap = 0x26,
+        Type_Variant = 0x27,
+        Type_GenericFunction = 0x28,
+        Type_WeakFunctionRef = 0x29,
+        Type_ColorSequence = 0x2a,
+        Type_ColorSequenceKeypoint = 0x2b,
+        Type_NumberRange = 0x2c,
+        Type_NumberSequence = 0x2d,
+        Type_NumberSequenceKeypoint = 0x2e,
+        Type_InputObject = 0x2f,
+        Type_Connection = 0x30,
+        Type_ContentId = 0x31,
+        Type_DescribedBase = 0x32,
+        Type_RefType = 0x33,
+        Type_QFont = 0x34,
+        Type_QDir = 0x35,
+        Type_EventInstance = 0x36,
+        Type_TweenInfo = 0x37,
+        Type_DockWidgetPluginGuiInfo = 0x38,
+        Type_PluginDrag = 0x39,
+        Type_Random = 0x3a,
+        Type_PathWaypoint = 0x3b,
+        Type_FloatCurveKey = 0x3c,
+        Type_RotationCurveKey = 0x3d,
+        Type_ValueCurveKey = 0x3e,
+        Type_SharedString = 0x3f,
+        Type_DateTime = 0x40,
+        Type_RaycastParams = 0x41,
+        Type_RaycastResult = 0x42,
+        Type_OverlapParams = 0x43,
+        Type_LazyTable = 0x44,
+        Type_DebugTable = 0x45,
+        Type_CatalogSearchParams = 0x46,
+        Type_OptionalCoordinateFrame = 0x47,
+        Type_CSGPropertyData = 0x48,
+        Type_UniqueId = 0x49,
+        Type_Font = 0x4a,
+        Type_SharedTable = 0x4b,
+        Type_SharedTableIterator = 0x4c,
+        Type_AnimationMask = 0x4d,
+        Type_AnimationPose = 0x4e,
+        Type_ClipEvaluator = 0x4f,
+        Type_OpenCloudModel = 0x50,
+        Type_InstanceRef = 0x51,
+        Type_SecurityCapabilities = 0x52,
+        Type_ArticulatedJoint = 0x53,
+        Type_AnimationContext = 0x54,
+        Type_Secret = 0x55,
+        Type_Buffer = 0x56,
+        Type_Integer = 0x57,
+        Type_Path2DControlPoint = 0x58,
+        Type_ReplicationPV = 0x59,
+        Type_FacsReplicationData = 0x5a,
+        Type_AnimationMaskModifier = 0x5b,
+        Type_Content = 0x5c,
+        Type_NetAssetHandle = 0x5d,
+        Type_NetAssetRef = 0x5e,
+        Type_Object = 0x5f,
+        Type_AdReward = 0x60,
+        Type_AssetContentMap = 0x61,
+        Type_SlimReplicationData = 0x62,
+        Type_User = 0x63,
+        Type_WebViewParams = 0x64,
+        Type_AnimTrackPlayState = 0x65,
+        Type_AnimTrackMetadata = 0x66,
+        Type_AnimTrackWeight = 0x67,
+        Type_ScopedInstanceIdentity = 0x68,
+    };
+    enum ItemType : int {
+        End = 0x0,
+        Delete = 0x1,
+        New = 0x2,
+        ChangeProperty = 0x3,
+        Marker = 0x4,
+        Other1 = 0x5,
+        Other2 = 0x6,
+        EventInvocation = 0x7,
+        RequestCharacter = 0x8,
+        Other3 = 0x9,
+        CFrameAck = 0xa,
+        JoinData = 0xb,
+        ClientQuotaUpdate = 0xc,
+        StreamData = 0xd,
+        RegionRemoval = 0xe,
+        InstanceRemoval = 0xf,
+        Tag = 0x10,
+        Stats = 0x11,
+        Other4 = 0x12,
+        ResolveAtomicTree = 0x13,
+        StreamingInfo = 0x14,
+        ChangeAttribute = 0x15,
+        JoinDataV2 = 0x16,
+        StreamTerrain = 0x17,
+        StreamPrefetchInfo = 0x18,
+        StreamPrefetchRequest = 0x19,
+        StreamReplicationFocus = 0x1a,
+        Destroy = 0x1b,
+        ClientQuotaStreamUpdate = 0x1c,
+        StreamModelPersistentPlayerAdd = 0x1d,
+        StreamModelPersistentPlayerRemove = 0x1e,
+        ClientQoS = 0x1f,
+        ChangeInst = 0x20,
+        ChangeObjProp = 0x21,
+        DeferredSharedString = 0x22,
+        ISRTimestamp = 0x23,
+        StreamReplicationFocusRemove = 0x24,
+        StreamPinData = 0x25,
+        ServerTime = 0x26,
+        Unknown1 = 0x27,
+        Unknown2 = 0x28,
+        InstanceIntent = 0x29,
+        StreamExcludedInstances = 0x2a,
+        RegionTerrainLODRemoval = 0x2b,
+        Unknown3 = 0x2c,
+    };
+}
 
-    namespace Identity
-    {
-    const uintptr_t GetCapabilities = REBASE(0x1CC5820);
-    }
-
-    namespace Script
-    {
-    const uintptr_t ScriptContextResume = REBASE(0x4115130);
-    const uintptr_t GetModuleFromVMStateMap = REBASE(0x4123230);
-    }
-
-    namespace Actor
-    {
-    const uintptr_t TaskDesynchronize = REBASE(0x41D2D90);
-    const uintptr_t TaskSynchronize = REBASE(0x41D2980);
-    }
-
-    namespace Task
-    {
-    const uintptr_t Delay = REBASE(0x41D4160);
-    const uintptr_t Desynchronize = REBASE(0x41D2D90);
-    const uintptr_t Spawn = REBASE(0x41D3DF0);
-    const uintptr_t Sync = REBASE(0x41D2980);
-    const uintptr_t Wait = REBASE(0x41D4460);
-    }
-
-    namespace Input
-    {
-    const uintptr_t FireTouchInterest = REBASE(0xA5FAE0);
-    }
-
-    namespace Signal
-    {
-    const uintptr_t DisconnectConnect = REBASE(0x40410A0);
-    }
-
-    namespace Luau
-    {
-    const uintptr_t LuaD_Throw = REBASE(0x26D4690);
-    }
-
-    namespace Lock
-    {
-    const uintptr_t WriteLock = REBASE(0x47E7940);
-    }
-	
-	namespace Hooks {
-    inline uintptr_t NtCreateSection = 0x1088770;
-    inline uintptr_t RtlExitUserProcess = 0x27a980;
-    inline uintptr_t NtAllocateVirtualMemory = 0xb28110;
-    inline uintptr_t NtFreeVirtualMemory = 0x145ece0;
-    inline uintptr_t NtMapViewOfSection = 0x144e630;
-    inline uintptr_t NtUnmapViewOfSection = 0xb30cb0;
-    inline uintptr_t NtTerminateProcess = 0x99e1c0;
-    inline uintptr_t NtCreateThread = 0x8c80f0;
-    inline uintptr_t NtCreateThreadEx = 0x8f44b0;
-    inline uintptr_t NtRaiseException = 0x1459d90;
-    inline uintptr_t NtSuspendThread = 0xb1be90;
-    inline uintptr_t NtQuerySystemInformation = 0x25cbf0;
-    inline uintptr_t NtSetContextThread = 0x89cc40;
-    inline uintptr_t NtProtectVirtualMemory = 0x27fe50;
-    inline uintptr_t NtQueryVirtualMemory = 0x1453340;
-    inline uintptr_t NtRaiseHardError = 0x8faa90;
-    inline uintptr_t KiUserExceptionDispatcher = 0x2b17c0;
-    inline uintptr_t KiUserCallbackDispatcher = 0x2b17e0;
-    inline uintptr_t KiUserApcDispatcher = 0x2b18d0;
-    inline uintptr_t LdrInitializeThunk = 0x2b18e0;
-    inline uintptr_t NtContinue = 0x28ef20;
-	}
+namespace Hyperion {
+    const ULONGLONG __guard_dispatcher_icall_fptr = REBASE_HYPERION(0x2b1990);
+    const ULONGLONG bitmap = REBASE_HYPERION(0x2f070);
+    const ULONGLONG InstrumentationCallback = REBASE_HYPERION(0x2b1800);
+    const ULONGLONG InstrumentationCallback0 = REBASE_HYPERION(0x9d3ca0);
+    const ULONGLONG Hyperion_ZwAllocateVirtualMemory = REBASE_HYPERION(0xb28110);
+    const ULONGLONG Hyperion_NtContinue = REBASE_HYPERION(0x28ef20);
+    const ULONGLONG Hyperion_NtFreeVirtualMemory = REBASE_HYPERION(0x145ece0);
+    const ULONGLONG Hyperion_NtQuerySystemInformation = REBASE_HYPERION(0x25cbf0);
+    const ULONGLONG Hyperion_ZwRaiseException = REBASE_HYPERION(0x1459d90);
+    const ULONGLONG Hyperion_KiRaiseUserExceptionDispatcher = REBASE_HYPERION(0x9a9900);
+    const ULONGLONG Hyperion_KiUserApcDispatcher = REBASE_HYPERION(0x2b18d0);
+    const ULONGLONG Hyperion_KiUserCallbackDispatcher = REBASE_HYPERION(0x2b17e0);
+    const ULONGLONG Hyperion_KiUserExceptionDispatcher = REBASE_HYPERION(0x2b17c0);
+    const ULONGLONG Hyperion_ZwUnmapViewOfSection = REBASE_HYPERION(0xb30cb0);
+    const ULONGLONG Hyperion_NtCreateSectionEx = REBASE_HYPERION(0xf574f0);
+    const ULONGLONG Hyperion_LdrInitializeThunk = REBASE_HYPERION(0x2b18e0);
+    const ULONGLONG Hyperion_RtlGetNativeSystemInformation = REBASE_HYPERION(0x25cbf0);
+    const ULONGLONG Hyperion_NtTerminateThread = REBASE_HYPERION(0x2a11c0);
+    const ULONGLONG Hyperion_NtAllocateVirtualMemoryEx = REBASE_HYPERION(0x8d9cd0);
+    const ULONGLONG Hyperion_NtContinueEx = REBASE_HYPERION(0x12795a0);
+    const ULONGLONG Hyperion_NtCreateSection = REBASE_HYPERION(0x1088770);
+    const ULONGLONG Hyperion_NtCreateThread = REBASE_HYPERION(0x8c80f0);
+    const ULONGLONG Hyperion_NtCreateThreadEx = REBASE_HYPERION(0x8f44b0);
+    const ULONGLONG Hyperion_ZwQueryVirtualMemory = REBASE_HYPERION(0x1453340);
+    const ULONGLONG Hyperion_NtMapViewOfSection = REBASE_HYPERION(0x144e630);
+    const ULONGLONG Hyperion_NtMapViewOfSectionEx = REBASE_HYPERION(0x274bd0);
+    const ULONGLONG Hyperion_NtProtectVirtualMemory = REBASE_HYPERION(0x27fe50);
+    const ULONGLONG Hyperion_NtRaiseHardError = REBASE_HYPERION(0x8faa90);
+    const ULONGLONG Hyperion_RtlExitUserProcess = REBASE_HYPERION(0x27a980);
+    const ULONGLONG Hyperion_NtSetContextThread = REBASE_HYPERION(0x89cc40);
+    const ULONGLONG Hyperion_NtSuspendThread = REBASE_HYPERION(0xb1be90);
+    const ULONGLONG Hyperion_NtTerminateProcess = REBASE_HYPERION(0x99e1c0);
+    const ULONGLONG Hyperion_NtUnmapViewOfSectionEx = REBASE_HYPERION(0xf53890);
+    const ULONGLONG Hyperion_GetCurrentProcessId = REBASE_HYPERION(0xb76430);
+    const ULONGLONG Hyperion_SetUnhandledExceptionFilter = REBASE_HYPERION(0xeceeb0);
+    const ULONGLONG MainThreadEntry1 = REBASE_HYPERION(0x2aed70);
+    const ULONGLONG RobloxEntry = REBASE_HYPERION(0x2a27b0);
 }
