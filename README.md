@@ -8,24 +8,24 @@
 > _You can use api example for auto offsets updater or anything else_  
 
 # Links
-***Windows:*** _[Future](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-e7d81637d42c4b23)_  
-***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-f5a60436d48947d3)_  
+***Windows:*** _[Future]_  
+***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-e7d81637d42c4b23)_  
 
 # Windows
-***Future player version:*** _version-e7d81637d42c4b23_  
-***Current player version:*** _version-f5a60436d48947d3_  
-***Previous player version:*** _version-17d504d2c9544583_  
-
+***Future player version:***  
+***Current player version:*** _version-e7d81637d42c4b23_  
+***Previous player version:*** _version-f5a60436d48947d3_  
 # Mac
-***Future player version:*** _version-2a3a7efa1a934799_  
-***Current player version:*** _version-4c4fc877ca9b4c61_  
-***Previous player version:*** _version-31dba3b2537245ce_  
+***Future player version:***  
+***Current player version:*** _version-2a3a7efa1a934799_  
+***Previous player version:*** _version-4c4fc877ca9b4c61_  
 
 # Versions history
 
 <details>
 <summary><b>Windows</b></summary>
 
+_version-e7d81637d42c4b23 | 03.09.2026_  
 _version-f5a60436d48947d3 | 28.08.2026_  
 _version-17d504d2c9544583 | 26.08.2026_  
 
@@ -34,6 +34,7 @@ _version-17d504d2c9544583 | 26.08.2026_
 <details>
 <summary><b>Mac</b></summary>
 
+_version-2a3a7efa1a934799 | 03.09.2026_  
 _version-4c4fc877ca9b4c61 | 27.08.2026_  
 _version-31dba3b2537245ce | 25.08.2026_  
 
