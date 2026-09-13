@@ -1,10 +1,10 @@
 // ------------------------------------------------------------
-//  Dumper      : Argus 5.2 (Internal Offsets)
+//  Dumper      : Argus 5.5
 //  Alert       : Verify offsets before use.
 //  Owner       : @phantomteam | @kreker757
 //  Version     : version-c5aecda2245e4fae
-//  Time Taken  : 13.70s
-//  Success     : 73
+//  Time Taken  : 16.28s
+//  Success     : 83
 //  Failed      : 0
 // ------------------------------------------------------------
 #pragma once
@@ -74,6 +74,19 @@ namespace Offsets
         constexpr uintptr_t lua_typename = REBASE(0x26F84B0);
         constexpr uintptr_t LuaT_eventname = REBASE(0x63EABD0);
         constexpr uintptr_t LuaT_typenames = REBASE(0x63EAB60);
+        constexpr uintptr_t lua_yield = REBASE(0x163C5E0);
+        constexpr uintptr_t lua_checkstack = REBASE(0x26F7B00);
+        constexpr uintptr_t pseudo2addr = REBASE(0x26F7960);
+    };
+
+    namespace Coroutine {
+        constexpr uintptr_t close = REBASE(0x5626CA0);
+        constexpr uintptr_t create = REBASE(0x5626310);
+        constexpr uintptr_t isyieldable = REBASE(0x5626C10);
+        constexpr uintptr_t running = REBASE(0x5626BA0);
+        constexpr uintptr_t status = REBASE(0x56248E0);
+        constexpr uintptr_t wrap = REBASE(0x56268D0);
+        constexpr uintptr_t yield = REBASE(0x5626B40);
     };
 
     namespace Instance {
