@@ -8,35 +8,12 @@
 > _You can use api example for auto offsets updater or anything else_  
 
 # Links
-***Windows:*** _[Future](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-c5aecda2245e4fae)_  
-***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-e7d81637d42c4b23)_  
+***Windows:*** _[Future]_  
+***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-c5aecda2245e4fae)_  
 
 # Windows
-***Current player version:*** _version-e7d81637d42c4b23_  
-***Previous player version:*** _version-f5a60436d48947d3_  
-# Mac
-***Current player version:*** _version-2a3a7efa1a934799_  
-***Previous player version:*** _version-4c4fc877ca9b4c61_  
-
-# Versions history
-
-<details>
-<summary><b>Windows</b></summary>
-
-_version-e7d81637d42c4b23 | 03.09.2026_  
-_version-f5a60436d48947d3 | 28.08.2026_  
-_version-17d504d2c9544583 | 26.08.2026_  
-
-</details>
-
-<details>
-<summary><b>Mac</b></summary>
-
-_version-2a3a7efa1a934799 | 03.09.2026_  
-_version-4c4fc877ca9b4c61 | 27.08.2026_  
-_version-31dba3b2537245ce | 25.08.2026_  
-
-</details>
+***Current player version:*** _version-c5aecda2245e4fae_  
+***Previous player version:*** _version-e7d81637d42c4b23_  
 
 # Credits
 ***Theo offsets***  
