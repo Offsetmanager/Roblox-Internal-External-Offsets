@@ -1,9 +1,11 @@
 // ------------------------------------------------------------
-//  Dumper      : Argus 5.0 (Internal Offsets)
+//  Dumper      : Argus 5.2 (Internal Offsets)
 //  Alert       : Verify offsets before use.
 //  Owner       : @phantomteam | @kreker757
 //  Version     : version-c5aecda2245e4fae
-//  Time Taken  : 7.58s
+//  Time Taken  : 13.70s
+//  Success     : 73
+//  Failed      : 0
 // ------------------------------------------------------------
 #pragma once
 #include <cstdint>
@@ -14,13 +16,12 @@
 namespace Offsets
 {
     const uintptr_t Print = REBASE(0x1CAB4B0);
+    const uintptr_t OpCodeLookupTable = REBASE(0x6E26C70);
     const uintptr_t EnableLoadModule = REBASE(0x8496288);
     const uintptr_t TaskSchedulerTargetFps = REBASE(0x81A8D78);
     const uintptr_t GetLuaState = REBASE(0x4248600);
     const uintptr_t KTable = REBASE(0x80BBE20);
     const uintptr_t ScriptContextResume = REBASE(0x4260F50);
-    const uintptr_t FireTouchInterest = REBASE(0xA6DFA0);
-    const uintptr_t FireProximityPrompt = REBASE(0x3102650);
     const uintptr_t CastArgs = REBASE(0x4124670);
 
     namespace Identity {
@@ -43,7 +44,9 @@ namespace Offsets
 
     namespace Luau {
         constexpr uintptr_t LuaVM_Load = REBASE(0x41B3B50);
+        constexpr uintptr_t Luau_Execute = REBASE(0x272A260);
         constexpr uintptr_t LuaD_Throw = REBASE(0x2709720);
+        constexpr uintptr_t LuaH_dummynode = REBASE(0x63CAB08);
         constexpr uintptr_t LuaO_nilobject = REBASE(0x63CDF48);
         constexpr uintptr_t luaC_step = REBASE(0x2719020);
     };
@@ -99,7 +102,6 @@ namespace Offsets
 
     namespace DataModel {
         constexpr uintptr_t Workspace = 0x158;
-        constexpr uintptr_t PlaceId = 0x190;
     };
 
     namespace FakeDataModel {
@@ -107,27 +109,36 @@ namespace Offsets
         constexpr uintptr_t FakeDataModelToDataModel = 0x1F8;
     };
 
+    namespace Input {
+        constexpr uintptr_t FireMouseClick = REBASE(0x3B4D9F0);
+        constexpr uintptr_t FireRightMouseClick = REBASE(0x3B4DB90);
+        constexpr uintptr_t FireMouseHoverEnter = REBASE(0x3B4EFE0);
+        constexpr uintptr_t FireMouseHoverLeave = REBASE(0x3B4F180);
+        constexpr uintptr_t FireProximityPrompt = REBASE(0x3102650);
+        constexpr uintptr_t FireTouchInterest = REBASE(0xA6DFA0);
+    };
+
     namespace Hooks {
-        inline uintptr_t NtCreateSection = 0x6bc8c0;
-        inline uintptr_t RtlExitUserProcess = 0x13fdce0;
-        inline uintptr_t NtAllocateVirtualMemory = 0x9ad980;
-        inline uintptr_t NtFreeVirtualMemory = 0x684e10;
-        inline uintptr_t NtMapViewOfSection = 0xd798f0;
-        inline uintptr_t NtUnmapViewOfSection = 0x31a400;
-        inline uintptr_t NtTerminateProcess = 0x13fb6e0;
-        inline uintptr_t NtCreateThread = 0x2a5940;
-        inline uintptr_t NtCreateThreadEx = 0x256aa0;
+        inline uintptr_t NtCreateSection = 0x6BC8C0;
+        inline uintptr_t RtlExitUserProcess = 0x13FDCE0;
+        inline uintptr_t NtAllocateVirtualMemory = 0x9AD980;
+        inline uintptr_t NtFreeVirtualMemory = 0x684E10;
+        inline uintptr_t NtMapViewOfSection = 0xD798F0;
+        inline uintptr_t NtUnmapViewOfSection = 0x31A400;
+        inline uintptr_t NtTerminateProcess = 0x13FB6E0;
+        inline uintptr_t NtCreateThread = 0x2A5940;
+        inline uintptr_t NtCreateThreadEx = 0x256AA0;
         inline uintptr_t NtRaiseException = 0x1405880;
-        inline uintptr_t NtSuspendThread = 0x2918d0;
-        inline uintptr_t NtQuerySystemInformation = 0x324b20;
-        inline uintptr_t NtSetContextThread = 0xc6b550;
-        inline uintptr_t NtProtectVirtualMemory = 0x293fd0;
-        inline uintptr_t NtQueryVirtualMemory = 0x9b40f0;
-        inline uintptr_t NtRaiseHardError = 0xd80060;
-        inline uintptr_t KiUserExceptionDispatcher = 0x6f7df0;
-        inline uintptr_t KiUserCallbackDispatcher = 0x6f7e10;
-        inline uintptr_t KiUserApcDispatcher = 0x6f7f00;
-        inline uintptr_t LdrInitializeThunk = 0x6f7f10;
-        inline uintptr_t NtContinue = 0x102a000;
-    }
+        inline uintptr_t NtSuspendThread = 0x2918D0;
+        inline uintptr_t NtQuerySystemInformation = 0x324B20;
+        inline uintptr_t NtSetContextThread = 0xC6B550;
+        inline uintptr_t NtProtectVirtualMemory = 0x293FD0;
+        inline uintptr_t NtQueryVirtualMemory = 0x9B40F0;
+        inline uintptr_t NtRaiseHardError = 0xD80060;
+        inline uintptr_t KiUserExceptionDispatcher = 0x6F7DF0;
+        inline uintptr_t KiUserCallbackDispatcher = 0x6F7E10;
+        inline uintptr_t KiUserApcDispatcher = 0x6F7F00;
+        inline uintptr_t LdrInitializeThunk = 0x6F7F10;
+        inline uintptr_t NtContinue = 0x102A000;
+    };
 }
