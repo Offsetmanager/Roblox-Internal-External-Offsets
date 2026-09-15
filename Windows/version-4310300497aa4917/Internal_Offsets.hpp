@@ -45,7 +45,7 @@ namespace Offsets
     };
 
     namespace Luau {
-        constexpr uintptr_t LuaVM_Load = REBASE(0x4211130); //can be REBASE(0x128C1D0);
+        constexpr uintptr_t LuaVM_Load = REBASE(0x4211130);
         constexpr uintptr_t Luau_Execute = REBASE(0x277A970);
         constexpr uintptr_t LuaD_Throw = REBASE(0x2750300);
         constexpr uintptr_t LuaH_dummynode = REBASE(0x6437098);
