@@ -3,9 +3,9 @@
 //  Alert       : Verify offsets before use.
 //  Owner       : @phantomteam | @kreker757
 //  Version     : version-4310300497aa4917
-//  Time Taken  : 50.91s
-//  Success     : 81
-//  Failed      : 6
+//  Time Taken  : 77.79s
+//  Success     : 86
+//  Failed      : 1
 // ------------------------------------------------------------
 #pragma once
 #include <cstdint>
@@ -16,8 +16,10 @@
 namespace Offsets
 {
     const uintptr_t Print = REBASE(0x1CD9D90);
+    const uintptr_t OpCodeLookupTable = REBASE(0x6E964D0);
     const uintptr_t EnableLoadModule = REBASE(0x8515B38);
     const uintptr_t TaskSchedulerTargetFps = REBASE(0x8227738);
+    const uintptr_t GetLuaState = REBASE(0x42A6830);
     const uintptr_t KTable = REBASE(0x813A7A0);
     const uintptr_t ScriptContextResume = REBASE(0x42C1E60);
     const uintptr_t CastArgs = REBASE(0x417B280);
@@ -43,7 +45,8 @@ namespace Offsets
     };
 
     namespace Luau {
-		constexpr uintptr_t LuaVM_Load = REBASE(0x128C1D0);
+        constexpr uintptr_t LuaVM_Load = REBASE(0x4211130); //can be REBASE(0x128C1D0);
+        constexpr uintptr_t Luau_Execute = REBASE(0x277A970);
         constexpr uintptr_t LuaD_Throw = REBASE(0x2750300);
         constexpr uintptr_t LuaH_dummynode = REBASE(0x6437098);
         constexpr uintptr_t LuaO_nilobject = REBASE(0x6437A18);
@@ -79,6 +82,7 @@ namespace Offsets
     };
 
     namespace Coroutine {
+        constexpr uintptr_t close = REBASE(0x5694590);
         constexpr uintptr_t create = REBASE(0x5693C10);
         constexpr uintptr_t isyieldable = REBASE(0x5694510);
         constexpr uintptr_t running = REBASE(0x56944A0);
