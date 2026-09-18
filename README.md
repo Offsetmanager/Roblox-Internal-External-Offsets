@@ -15,7 +15,7 @@
 ***Current player version:*** _version-4310300497aa4917_  
 ***Previous player version:*** _version-c5aecda2245e4fae_  
 
-# Latest offsets in tables
+# Latest offsets
 | Offset | Rebased | Value | Offset | Rebased | Value |
 | :--- | :---: | ---: | :--- | :---: | ---: |
 | Print | Yes | 0x1CD9D90 | OpCodeLookupTable | Yes | 0x6E964D0 |
