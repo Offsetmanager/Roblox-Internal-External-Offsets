@@ -3,8 +3,8 @@
 //  Alert       : Verify offsets before use.
 //  Owner       : @phantomteam | @kreker757
 //  Version     : version-4310300497aa4917
-//  Time Taken  : 77.79s
-//  Success     : 86
+//  Time Taken  : 141.35s
+//  Success     : 98
 //  Failed      : 1
 // ------------------------------------------------------------
 #pragma once
@@ -16,22 +16,51 @@
 namespace Offsets
 {
     const uintptr_t Print = REBASE(0x1CD9D90);
+    const uintptr_t InvokeServer = REBASE(0x351A7F0);
     const uintptr_t OpCodeLookupTable = REBASE(0x6E964D0);
     const uintptr_t EnableLoadModule = REBASE(0x8515B38);
     const uintptr_t TaskSchedulerTargetFps = REBASE(0x8227738);
     const uintptr_t GetLuaState = REBASE(0x42A6830);
     const uintptr_t KTable = REBASE(0x813A7A0);
-    const uintptr_t ScriptContextResume = REBASE(0x42C1E60);
+    const uintptr_t PushInstance = REBASE(0x4202490);
     const uintptr_t CastArgs = REBASE(0x417B280);
     const uintptr_t InstanceNew = REBASE(0x43297B0);
 
+    namespace TLS {
+        constexpr uintptr_t Get_Tss_Data = REBASE(0x4250);
+    };
+
     namespace Identity {
+        constexpr uintptr_t IdentityStruct = REBASE(0x81DDD08);
+    };
+
+    namespace Capabilities {
         constexpr uintptr_t GetCapabilities = REBASE(0x1D14D50);
+        constexpr uintptr_t Capabilities = 0x30;
     };
 
     namespace RequireBypass {
         constexpr uintptr_t RequireBypass = 0xA58;
         constexpr uintptr_t IsCoreScript = 0x168;
+    };
+
+    namespace Crash {
+        constexpr uintptr_t LockViolationScriptCrash = REBASE(0x8515898);
+        constexpr uintptr_t LockViolationInstanceCrash = REBASE(0x85C0F18);
+    };
+
+    namespace SC {
+        constexpr uintptr_t SCResumeOffset = REBASE(0x42C1E60);
+        constexpr uintptr_t SC2Resume = 0xA18;
+    };
+
+    namespace RakNet {
+        constexpr uintptr_t Job2RakPeer = 0x1D8;
+        constexpr uintptr_t RakPeerVTableSize = 0x3E0;
+        constexpr uintptr_t idx_Connect = 13;
+        constexpr uintptr_t idx_Send = 20;
+        constexpr uintptr_t idx_Recieve = 25;
+        constexpr uintptr_t convertItemEnumToString = REBASE(0x47C64C0);
     };
 
     namespace TaskDefer {
@@ -41,10 +70,11 @@ namespace Offsets
         constexpr uintptr_t TaskSpawn = REBASE(0x437EFB0);
         constexpr uintptr_t TaskDelay = REBASE(0x437F340);
         constexpr uintptr_t TaskWait = REBASE(0x437F640);
-        constexpr uintptr_t TaskCancel = REBASE(0x437D520);
+        constexpr uintptr_t TaskCancel = REBASE(0x437F8B0);
     };
 
     namespace Luau {
+        constexpr uintptr_t LoadModule = REBASE(0x42CFD70);
         constexpr uintptr_t LuaVM_Load = REBASE(0x4211130);
         constexpr uintptr_t Luau_Execute = REBASE(0x277A970);
         constexpr uintptr_t LuaD_Throw = REBASE(0x2750300);
@@ -127,6 +157,10 @@ namespace Offsets
     namespace FakeDataModel {
         constexpr uintptr_t Pointer = REBASE(0x8E42C98);
         constexpr uintptr_t FakeDataModelToDataModel = 0x1F8;
+    };
+
+    namespace Signal {
+        constexpr uintptr_t Disconnect = REBASE(0x41DF210);
     };
 
     namespace Input {
