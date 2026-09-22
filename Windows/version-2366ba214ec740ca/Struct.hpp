@@ -53,4 +53,4 @@ template <typename T> struct VMValue4 {
 #define PROTO_DEBUGINSN_ENC VMValue2
 #define PROTO_DEBUGNAME_ENC VMValue4
 #define PROTO_TYPEINFO_ENC VMValue1
-#define TSTRING_HASH_ENC VMValue3
+#define TSTRING_HASH_ENC VMValue2
