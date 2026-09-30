@@ -8,8 +8,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 						
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-02c37bc51a384b8f
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 97         𝓕𝓪𝓲𝓵𝓮𝓭: 4
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 191.64s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 100         𝓕𝓪𝓲𝓵𝓮𝓭: 1
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 123.92s
 						
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -32,6 +32,8 @@ namespace Offsets
     const uintptr_t KTable = REBASE(0x822C9C0);
     const uintptr_t PushInstance = REBASE(0x41E64E0);
     const uintptr_t CastArgs = REBASE(0x415A750);
+    const uintptr_t InstanceNew = REBASE(0x4310890);
+    const uintptr_t GetGlobalState = REBASE(0x41FE9B0);
     const uintptr_t GetLuaState = REBASE(0x4289D60);
 
     namespace Identity {
@@ -47,6 +49,7 @@ namespace Offsets
     };
 
     namespace Bytecode {
+        constexpr uintptr_t ByteCodeTableVerificationA = REBASE(0x85EE880);
         constexpr uintptr_t LocalScriptByteCode = 0x180;
         constexpr uintptr_t ModuleScriptByteCode = 0x128;
     };
@@ -107,7 +110,7 @@ namespace Offsets
         constexpr uintptr_t lua_typename = REBASE(0x2640470);
         constexpr uintptr_t LuaT_eventname = REBASE(0x6529DF0);
         constexpr uintptr_t LuaT_typenames = REBASE(0x6529D80);
-        constexpr uintptr_t lua_yield = REBASE(0x1586C50);
+        constexpr uintptr_t lua_yield = REBASE(0x1587086);
         constexpr uintptr_t lua_checkstack = REBASE(0x263FAB0);
         constexpr uintptr_t pseudo2addr = REBASE(0x263F910);
     };
