@@ -1,6 +1,6 @@
 # Roblox Offsets 2026
 > [!CAUTION]
-> ***Argus Dumper experimental so you need verify all struct and internal offsets from them.***
+> ***ArgusX Dumper experimental so you need verify all struct and internal offsets from them.***
 
 # API (Windows Only)
 > [!TIP]
@@ -24,3 +24,4 @@
 ***realperox.ide***  
 ***urmoit***  
 ***mwaw.0***  
+***savagealt3881***  
