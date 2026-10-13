@@ -1,1 +1,0 @@
-Print = "Invalid password for %s"
