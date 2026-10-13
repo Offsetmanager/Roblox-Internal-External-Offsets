@@ -5,7 +5,7 @@
 # API (Windows Only)
 > [!TIP]
 > ***Tested on windows 10 and 11***  
-> _You can use api example for auto offsets updater or anything else_  
+> _You can use api example for auto offsets or anything else_  
 
 # Links
 ***Windows:*** _[Future](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-7a0c6d10fcb34a2c)_  
