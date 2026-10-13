@@ -16,9 +16,7 @@
 ***Previous player version:*** _version-02c37bc51a384b8f_  
 
 # Decrypted Windows
-***version-cec3ad5889b447cf***  
-_[IDA](https://gofile.io/d/VDvfDuSa)_  
-_[Binary Ninja](https://gofile.io/d/2VZ9EFKp)_
+***version-cec3ad5889b447cf***   _[IDA](https://gofile.io/d/VDvfDuSa)_ / _[Binary Ninja](https://gofile.io/d/2VZ9EFKp)_  
 
 # Credits
 ***Theo offsets***  
