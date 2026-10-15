@@ -8,12 +8,12 @@
 > _You can use api example for auto offsets or anything else_  
 
 # Links
-***Windows:*** _[Future](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-7a0c6d10fcb34a2c)_  
-***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-cec3ad5889b447cf)_  
+***Windows:*** _[Future]_  
+***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-7a0c6d10fcb34a2c)_  
 
 # Windows
-***Current player version:*** _version-cec3ad5889b447cf_  
-***Previous player version:*** _version-02c37bc51a384b8f_  
+***Current player version:*** _version-7a0c6d10fcb34a2c_  
+***Previous player version:*** _version-cec3ad5889b447cf_  
 
 # Decrypted Windows
 ***version-cec3ad5889b447cf***   _[IDA](https://gofile.io/d/VDvfDuSa)_ / _[Binary Ninja](https://gofile.io/d/2VZ9EFKp)_  
