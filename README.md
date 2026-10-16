@@ -9,11 +9,11 @@
 
 # Links
 ***Windows:*** _[Future]_  
-***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-7a0c6d10fcb34a2c)_  
+***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-11f155f3450f4c8e)_  
 
 # Windows
-***Current player version:*** _version-7a0c6d10fcb34a2c_  
-***Previous player version:*** _version-cec3ad5889b447cf_  
+***Current player version:*** _version-11f155f3450f4c8e_  
+***Previous player version:*** _version-7a0c6d10fcb34a2c_  
 
 # Decrypted Windows
 ***version-cec3ad5889b447cf***   _[IDA](https://gofile.io/d/VDvfDuSa)_ / _[Binary Ninja](https://gofile.io/d/2VZ9EFKp)_  
