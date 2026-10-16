@@ -9,8 +9,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-11f155f3450f4c8e
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 101         𝓕𝓪𝓲𝓵𝓮𝓭: 18
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 14.18s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 110         𝓕𝓪𝓲𝓵𝓮𝓭: 10
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 14.74s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -27,9 +27,10 @@ namespace Offsets
     const uintptr_t FireServer = REBASE(0x3449B70);
     const uintptr_t FireClient = REBASE(0x3449D10);
     const uintptr_t FireAllClients = REBASE(0x3449F60);
+    const uintptr_t OpCodeLookupTable = REBASE(0x71433E0);
     const uintptr_t EnableLoadModule = REBASE(0x8891880);
     const uintptr_t TaskScheduler = REBASE(0x8D71348);
-    const uintptr_t TaskSchedulerTargetFps = REBASE(0x85DCBF0);
+    const uintptr_t TaskSchedulerTargetFps = REBASE(0x85DCC40);
     const uintptr_t KTable = REBASE(0x846BAA0);
     const uintptr_t GetGlobalState = REBASE(0x41ACDB0);
     const uintptr_t GetLuaState = REBASE(0x41ACDB0);
@@ -56,6 +57,10 @@ namespace Offsets
         const uintptr_t TaskWait = REBASE(0x43249D0);
         const uintptr_t TaskSynchronize = REBASE(0x4322DA0);
         const uintptr_t TaskDesynchronize = REBASE(0x4323210);
+        const uintptr_t TaskDefer = REBASE(0x4323E50);
+        const uintptr_t TaskSpawn = REBASE(0x4324330);
+        const uintptr_t TaskDelay = REBASE(0x43246D0);
+        const uintptr_t TaskCancel = REBASE(0x4324BD0);
     };
 
     namespace SC {
@@ -93,6 +98,8 @@ namespace Offsets
     };
 
     namespace Luau_Other {
+        const uintptr_t LuaO_nilobject = REBASE(0x667F848);
+        const uintptr_t LuaH_dummynode = REBASE(0x667F2E8);
         const uintptr_t luaB_assert = REBASE(0x2682C50);
         const uintptr_t luaB_print = REBASE(0x267B2D0);
         const uintptr_t luaB_error = REBASE(0x267B730);
@@ -164,5 +171,7 @@ namespace Offsets
     namespace Crash {
         const uintptr_t LockViolationScriptCrash = REBASE(0x88916D8);
         const uintptr_t LockViolationInstanceCrash = REBASE(0x893E918);
+        const uintptr_t LockViolationInstanceCrashStudio = REBASE(0x893E930);
+        const uintptr_t RBXCrashPtr = REBASE(0x8C8A680);
     };
 }
