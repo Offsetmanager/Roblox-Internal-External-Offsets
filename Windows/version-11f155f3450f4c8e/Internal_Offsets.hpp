@@ -9,8 +9,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-11f155f3450f4c8e
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 121         𝓕𝓪𝓲𝓵𝓮𝓭: 10
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 26.44s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 128         𝓕𝓪𝓲𝓵𝓮𝓭: 3
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 68.72s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -124,6 +124,8 @@ namespace Offsets
         const uintptr_t luaM_freeclasspage               = REBASE(0x265DB00);
         const uintptr_t lua_clock                        = REBASE(0x2686D80);
         const uintptr_t GcStep                           = REBASE(0x26440E0);
+        const uintptr_t luaM_toobig                      = REBASE(0x265D4A0);
+        const uintptr_t luaL_argerrorL                   = REBASE(0x26226B0);
         const uintptr_t RegisterUserdata                 = REBASE(0x261E6B0);
         const uintptr_t luaF_newproto                    = REBASE(0x2658CF0);
         const uintptr_t luaD_rawrunprotected             = REBASE(0x262DD90);
@@ -155,6 +157,14 @@ namespace Offsets
         const uintptr_t ConnectionConnected              = REBASE(0x49D7600);
         const uintptr_t ConnectionPushFront              = REBASE(0x49D7B00);
         const uintptr_t RaiseEventInvocation             = REBASE(0x1D370B0);
+    };
+
+    namespace LuaError {
+        const uintptr_t readonlyerror                    = REBASE(0x2657F80);
+        const uintptr_t methoderror                      = REBASE(0x2657F40);
+        const uintptr_t indexerror                       = REBASE(0x2657E40);
+        const uintptr_t ordererror                       = REBASE(0x2657DC0);
+        const uintptr_t forerrorL                        = REBASE(0x2657C90);
     };
 
     namespace InstanceBridge {
