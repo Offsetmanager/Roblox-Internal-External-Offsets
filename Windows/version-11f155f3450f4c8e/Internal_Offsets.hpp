@@ -10,7 +10,7 @@
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-11f155f3450f4c8e
                            𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 110         𝓕𝓪𝓲𝓵𝓮𝓭: 10
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 14.74s
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 14.54s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -73,33 +73,16 @@ namespace Offsets
         const uintptr_t Luau_Execute = REBASE(0x265F2B0);
         const uintptr_t LuaD_Throw = REBASE(0x262DDC0);
         const uintptr_t luaC_step = REBASE(0x2644300);
+        const uintptr_t LuaO_nilobject = REBASE(0x667F848);
+        const uintptr_t LuaH_dummynode = REBASE(0x667F2E8);
+    };
+
+    namespace Luau_Other {
         const uintptr_t luaC_init = REBASE(0x265DE50);
         const uintptr_t luaG_runerror = REBASE(0x26585A0);
         const uintptr_t luaO_pushfstring = REBASE(0x261D640);
         const uintptr_t luaM_visitgco = REBASE(0x265D9F0);
         const uintptr_t luaF_Freeproto = REBASE(0x26593C0);
-        const uintptr_t luaM_free = REBASE(0x265D590);
-        const uintptr_t luaM_freegco = REBASE(0x265D640);
-        const uintptr_t luaM_freeblock = REBASE(0x265D4D0);
-        const uintptr_t luaM_freeclasspage = REBASE(0x265DB00);
-        const uintptr_t lua_clock = REBASE(0x2686D80);
-        const uintptr_t GcStep = REBASE(0x26440E0);
-        const uintptr_t RegisterUserdata = REBASE(0x261E6B0);
-        const uintptr_t luaF_newproto = REBASE(0x2658CF0);
-        const uintptr_t luaD_rawrunprotected = REBASE(0x262DD90);
-        const uintptr_t Freeobj = REBASE(0x2642CD0);
-        const uintptr_t currfuncname = REBASE(0x2622630);
-        const uintptr_t luaO_pushvfstring = REBASE(0x2656F00);
-        const uintptr_t lua_pushvfstring = REBASE(0x261AD00);
-        const uintptr_t NewUserdataTagged = REBASE(0x261D650);
-        const uintptr_t Execute = REBASE(0x266D720);
-        const uintptr_t GetObjectTypeName = REBASE(0x265A5D0);
-        const uintptr_t GetObjectTypeNameString = REBASE(0x265A440);
-    };
-
-    namespace Luau_Other {
-        const uintptr_t LuaO_nilobject = REBASE(0x667F848);
-        const uintptr_t LuaH_dummynode = REBASE(0x667F2E8);
         const uintptr_t luaB_assert = REBASE(0x2682C50);
         const uintptr_t luaB_print = REBASE(0x267B2D0);
         const uintptr_t luaB_error = REBASE(0x267B730);
@@ -121,6 +104,23 @@ namespace Offsets
         const uintptr_t luaB_typeof = REBASE(0x2681BB0);
         const uintptr_t lua_checkstack = REBASE(0x2619930);
         const uintptr_t pseudo2addr = REBASE(0x2619780);
+        const uintptr_t luaM_free = REBASE(0x265D590);
+        const uintptr_t luaM_freegco = REBASE(0x265D640);
+        const uintptr_t luaM_freeblock = REBASE(0x265D4D0);
+        const uintptr_t luaM_freeclasspage = REBASE(0x265DB00);
+        const uintptr_t lua_clock = REBASE(0x2686D80);
+        const uintptr_t GcStep = REBASE(0x26440E0);
+        const uintptr_t RegisterUserdata = REBASE(0x261E6B0);
+        const uintptr_t luaF_newproto = REBASE(0x2658CF0);
+        const uintptr_t luaD_rawrunprotected = REBASE(0x262DD90);
+        const uintptr_t Freeobj = REBASE(0x2642CD0);
+        const uintptr_t currfuncname = REBASE(0x2622630);
+        const uintptr_t luaO_pushvfstring = REBASE(0x2656F00);
+        const uintptr_t lua_pushvfstring = REBASE(0x261AD00);
+        const uintptr_t NewUserdataTagged = REBASE(0x261D650);
+        const uintptr_t Execute = REBASE(0x266D720);
+        const uintptr_t GetObjectTypeName = REBASE(0x265A5D0);
+        const uintptr_t GetObjectTypeNameString = REBASE(0x265A440);
     };
 
     namespace Coroutine {
