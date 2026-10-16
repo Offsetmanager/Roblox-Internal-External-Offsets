@@ -19,16 +19,6 @@
 ***version-cec3ad5889b447cf***   _[IDA](https://gofile.io/d/VDvfDuSa)_ / _[Binary Ninja](https://gofile.io/d/2VZ9EFKp)_  
 
 # Credits
-***Theo offsets***  
-***Joseph offsets***  
-***Offsets Club***  
-***checkcaller***  
-***thorioum***  
-***realperox.ide***  
-***urmoit***  
-***mwaw.0***  
-***savagealt3881***  
-***isourclosure***  
-***credential_***  
-***nyxolz***  
-***lordnikky***  
+***Theo offsets*** ***Offsets Club*** ***Joseph offsets*** ***Offsets Club***  
+***checkcaller*** ***thorioum*** ***realperox.ide*** ***urmoit*** ***mwaw.0***   
+***savagealt3881*** ***isourclosure*** ***credential_*** ***nyxolz*** ***lordnikky***  
