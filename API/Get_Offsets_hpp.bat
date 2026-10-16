@@ -3,11 +3,11 @@ chcp 65001 > nul
 setlocal disabledelayedexpansion
 title Offsets by OffsetManager
 
-set "TempVers=%TEMP%\rblx_vers_%RANDOM%.hpp"
+set "TempVers=%TEMP%\rblx_vers_%RANDOM%.txt"
 set "CurrentVersion=Unknown"
 set "FutureVersion=Unknown"
 
-powershell -NoProfile -Command "$ErrorActionPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $j = (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Offsetmanager/Roblox-Internal-External-Offsets/refs/heads/main/API/Server/version.json') | ConvertFrom-Json; if ($j) { Write-Output ($j.current + ',' + $j.future) }" > "%TempVers%"
+powershell -NoProfile -Command "$ErrorActionPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $headers = @{ 'User-Agent' = 'WEAO-3PService' }; try { $curr = (Invoke-RestMethod -Uri 'https://weao.xyz/api/versions/current' -Headers $headers).Windows; $fut = (Invoke-RestMethod -Uri 'https://weao.xyz/api/versions/future' -Headers $headers).Windows; if ($curr) { Write-Output ($curr + ',' + $fut) } } catch {}" > "%TempVers%"
 
 if exist "%TempVers%" (
     for /f "usebackq tokens=1,2 delims=," %%A in ("%TempVers%") do (
@@ -17,7 +17,7 @@ if exist "%TempVers%" (
     del "%TempVers%" >nul 2>&1
 )
 
-if "%CurrentVersion%"=="Unknown" echo [!] Warning: Failed to fetch version.json from GitHub (Offline or Timeout).
+if "%CurrentVersion%"=="Unknown" echo [!] Warning: Failed to fetch versions from WEAO API (Offline or Rate Limited).
 
 :menu
 echo.
