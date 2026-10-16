@@ -9,8 +9,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-11f155f3450f4c8e
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 128         𝓕𝓪𝓲𝓵𝓮𝓭: 3
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 68.72s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 129         𝓕𝓪𝓲𝓵𝓮𝓭: 2
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 22.09s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -135,6 +135,7 @@ namespace Offsets
         const uintptr_t lua_pushvfstring                 = REBASE(0x261AD00);
         const uintptr_t NewUserdataTagged                = REBASE(0x261D650);
         const uintptr_t Execute                          = REBASE(0x266D720);
+        const uintptr_t GetTypeName                      = REBASE(0x261A490);
         const uintptr_t GetObjectTypeName                = REBASE(0x265A5D0);
         const uintptr_t GetObjectTypeNameString          = REBASE(0x265A440);
     };
