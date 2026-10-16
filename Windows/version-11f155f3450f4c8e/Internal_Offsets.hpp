@@ -9,8 +9,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-11f155f3450f4c8e
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 129         𝓕𝓪𝓲𝓵𝓮𝓭: 2
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 22.09s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 151         𝓕𝓪𝓲𝓵𝓮𝓭: 0
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 22.63s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -87,6 +87,7 @@ namespace Offsets
         const uintptr_t luaC_step                        = REBASE(0x2644300);
         const uintptr_t LuaO_nilobject                   = REBASE(0x667F848);
         const uintptr_t LuaH_dummynode                   = REBASE(0x667F2E8);
+        const uintptr_t ExecuteSingleStep                = REBASE(0x265FAB0);
     };
 
     namespace Luau_Other {
@@ -132,12 +133,18 @@ namespace Offsets
         const uintptr_t Freeobj                          = REBASE(0x2642CD0);
         const uintptr_t currfuncname                     = REBASE(0x2622630);
         const uintptr_t luaO_pushvfstring                = REBASE(0x2656F00);
+        const uintptr_t luaA_toobject                    = REBASE(0x2619850);
         const uintptr_t lua_pushvfstring                 = REBASE(0x261AD00);
         const uintptr_t NewUserdataTagged                = REBASE(0x261D650);
         const uintptr_t Execute                          = REBASE(0x266D720);
         const uintptr_t GetTypeName                      = REBASE(0x261A490);
         const uintptr_t GetObjectTypeName                = REBASE(0x265A5D0);
         const uintptr_t GetObjectTypeNameString          = REBASE(0x265A440);
+        const uintptr_t newpage                          = REBASE(0x265DCE0);
+        const uintptr_t Luau_Load                        = REBASE(0x269E780);
+        const uintptr_t GetLine                          = REBASE(0x26579D0);
+        const uintptr_t CallInternal                     = REBASE(0x261BD20);
+        const uintptr_t CallYieldable                    = REBASE(0x262DEA0);
     };
 
     namespace Coroutine {
@@ -158,6 +165,9 @@ namespace Offsets
         const uintptr_t ConnectionConnected              = REBASE(0x49D7600);
         const uintptr_t ConnectionPushFront              = REBASE(0x49D7B00);
         const uintptr_t RaiseEventInvocation             = REBASE(0x1D370B0);
+        const uintptr_t GetArguments                     = REBASE(0x421AA50);
+        const uintptr_t Once                             = REBASE(0x416A5D0);
+        const uintptr_t Wait                             = REBASE(0x416A770);
     };
 
     namespace LuaError {
@@ -171,6 +181,9 @@ namespace Offsets
     namespace InstanceBridge {
         const uintptr_t Index                            = REBASE(0x418EF60);
         const uintptr_t UserdataIndex                    = REBASE(0x4190E10);
+        const uintptr_t UserdataNamecall                 = REBASE(0x41928A0);
+        const uintptr_t NewIndex                         = REBASE(0x418E7C0);
+        const uintptr_t UserdataNewIndex                 = REBASE(0x4192200);
     };
 
     namespace Event {
@@ -199,4 +212,33 @@ namespace Offsets
         const uintptr_t LockViolationInstanceCrashStudio = REBASE(0x893E930);
         const uintptr_t RBXCrashPtr                      = REBASE(0x8C8A680);
     };
+
+    namespace SharedString {
+        const uintptr_t Create                           = REBASE(0x49E20F0);
+        const uintptr_t Release                          = REBASE(0x7F2C30);
+    };
+
+    namespace RobloxProperty {
+        const uintptr_t InternPropertyName               = REBASE(0x2A5D930);
+        const uintptr_t LookupPropertyName               = REBASE(0x2A5DD50);
+        const uintptr_t GetProperty                      = REBASE(0x1D223A0);
+    };
+
+    namespace Scheduler {
+        const uintptr_t StepWaitingHybridScripts         = REBASE(0x428DFE0);
+    };
+
+    namespace Property {
+        const uintptr_t ValueGetUnavailable              = REBASE(0xA962B0);
+        const uintptr_t ValueSetUnavailable              = REBASE(0x7C5540);
+    };
+
+    namespace CallbackChain {
+        const uintptr_t AsyncTrampoline                  = REBASE(0xBA8D30);
+    };
+}
+
+namespace Aliases {
+    inline auto GetLuaState = Offsets::GetGlobalState;
+    inline auto LuaVM_Load = Offsets::Luau::LoadModule;
 }
