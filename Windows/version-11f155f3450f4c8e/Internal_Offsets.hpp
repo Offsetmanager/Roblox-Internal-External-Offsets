@@ -9,8 +9,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-11f155f3450f4c8e
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 119         𝓕𝓪𝓲𝓵𝓮𝓭: 10
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 15.82s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 121         𝓕𝓪𝓲𝓵𝓮𝓭: 10
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 26.44s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -90,6 +90,8 @@ namespace Offsets
     };
 
     namespace Luau_Other {
+        const uintptr_t LuaT_typenames                   = REBASE(0x66A0F70);
+        const uintptr_t LuaT_eventname                   = REBASE(0x66A0FE0);
         const uintptr_t luaC_init                        = REBASE(0x265DE50);
         const uintptr_t luaG_runerror                    = REBASE(0x26585A0);
         const uintptr_t luaO_pushfstring                 = REBASE(0x261D640);
