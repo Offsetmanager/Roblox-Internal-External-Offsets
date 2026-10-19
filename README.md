@@ -15,9 +15,6 @@
 ***Current player version:*** _version-11f155f3450f4c8e_  
 ***Previous player version:*** _version-7a0c6d10fcb34a2c_  
 
-# Decrypted Windows
-***version-cec3ad5889b447cf***   _[IDA](https://gofile.io/d/VDvfDuSa)_ / _[Binary Ninja](https://gofile.io/d/2VZ9EFKp)_  
-
 # Credits
 ***Theo offsets*** ***Offsets Club*** ***Joseph offsets*** ***Offsets Club***  
 ***checkcaller*** ***thorioum*** ***realperox.ide*** ***urmoit*** ***mwaw.0***   
