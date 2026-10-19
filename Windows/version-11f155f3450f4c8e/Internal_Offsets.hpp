@@ -9,8 +9,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-11f155f3450f4c8e
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 151         𝓕𝓪𝓲𝓵𝓮𝓭: 0
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 22.63s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 155         𝓕𝓪𝓲𝓵𝓮𝓭: 0
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 30.39s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -44,8 +44,26 @@ namespace Offsets
 
     namespace Identity {
         const uintptr_t GetCapabilities                  = REBASE(0x1D241C0);
+        const uintptr_t PrintIdentity                    = REBASE(0x425F710);
         const uintptr_t TLS_Slot_get                     = REBASE(0x6BB0);
         const uintptr_t Impersonator                     = REBASE(0x1D24280);
+    };
+
+    namespace RobloxThread {
+        const uintptr_t IdentityPtr                      = REBASE(0x854F778);
+    };
+
+    namespace Bytecode {
+        const uintptr_t VerificationTableA               = REBASE(0x85D3CB0);
+    };
+
+    namespace LuaError {
+        const uintptr_t luaL_error                       = REBASE(0x2623300);
+        const uintptr_t readonlyerror                    = REBASE(0x2657F80);
+        const uintptr_t methoderror                      = REBASE(0x2657F40);
+        const uintptr_t indexerror                       = REBASE(0x2657E40);
+        const uintptr_t ordererror                       = REBASE(0x2657DC0);
+        const uintptr_t forerrorL                        = REBASE(0x2657C90);
     };
 
     namespace ExtraSpace {
@@ -168,14 +186,6 @@ namespace Offsets
         const uintptr_t GetArguments                     = REBASE(0x421AA50);
         const uintptr_t Once                             = REBASE(0x416A5D0);
         const uintptr_t Wait                             = REBASE(0x416A770);
-    };
-
-    namespace LuaError {
-        const uintptr_t readonlyerror                    = REBASE(0x2657F80);
-        const uintptr_t methoderror                      = REBASE(0x2657F40);
-        const uintptr_t indexerror                       = REBASE(0x2657E40);
-        const uintptr_t ordererror                       = REBASE(0x2657DC0);
-        const uintptr_t forerrorL                        = REBASE(0x2657C90);
     };
 
     namespace InstanceBridge {
