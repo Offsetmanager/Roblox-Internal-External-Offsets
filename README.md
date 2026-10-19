@@ -8,8 +8,8 @@
 > _You can use api example for auto offsets or anything else_  
 
 # Links
-***Windows:*** _[Future]_  
-***Windows:*** _[Current](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-11f155f3450f4c8e)_  
+***[version-11f155f3450f4c8e](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-11f155f3450f4c8e)***  
+***[version-7a0c6d10fcb34a2c](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-7a0c6d10fcb34a2c)***  
 
 # Windows
 ***Current player version:*** _version-11f155f3450f4c8e_  
