@@ -9,8 +9,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-117ad38284844374
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 136         𝓕𝓪𝓲𝓵𝓮𝓭: 20
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 51.77s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 139         𝓕𝓪𝓲𝓵𝓮𝓭: 17
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 42.57s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -138,6 +138,8 @@ namespace Offsets
         const uintptr_t luaB_typeof                      = REBASE(0x26DAC00);
         const uintptr_t lua_checkstack                   = REBASE(0x268C3F0);
         const uintptr_t pseudo2addr                      = REBASE(0x268C250);
+        const uintptr_t luaM_free                        = REBASE(0x26DFAD0);
+        const uintptr_t luaM_freegco                     = REBASE(0x26DFB80);
         const uintptr_t luaM_freeclasspage               = REBASE(0x26E0040);
         const uintptr_t lua_clock                        = REBASE(0x26E0C10);
         const uintptr_t GcStep                           = REBASE(0x26B0960);
@@ -149,10 +151,11 @@ namespace Offsets
         const uintptr_t luaO_pushvfstring                = REBASE(0x26B5D00);
         const uintptr_t luaA_toobject                    = REBASE(0x268C310);
         const uintptr_t NewUserdataTagged                = REBASE(0x2690150);
-        const uintptr_t Execute                          = REBASE(0x5CCEB25);
+        const uintptr_t Execute                          = REBASE(0x26CA240);
         const uintptr_t GetTypeName                      = REBASE(0x268CF50);
         const uintptr_t GetObjectTypeName                = REBASE(0x26B93D0);
         const uintptr_t GetObjectTypeNameString          = REBASE(0x26B9240);
+        const uintptr_t Luau_Load                        = REBASE(0x26F4750);
         const uintptr_t CallInternal                     = REBASE(0x268DB80);
         const uintptr_t CallYieldable                    = REBASE(0x2691FF0);
     };
@@ -210,7 +213,7 @@ namespace Offsets
 
     namespace SharedString {
         const uintptr_t Create                           = REBASE(0x4AA8D10);
-        const uintptr_t Release                          = REBASE(0x2F11530);
+        const uintptr_t Release                          = REBASE(0x824510);
     };
 
     namespace RobloxProperty {
