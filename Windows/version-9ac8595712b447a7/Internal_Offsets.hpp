@@ -9,8 +9,8 @@
                         𝓑𝔂 @𝓹𝓱𝓪𝓷𝓽𝓸𝓶𝓽𝓮𝓪𝓶 | @𝓴𝓻𝓮𝓴𝓮𝓻575
 
                          𝓥𝓮𝓻𝓼𝓲𝓸𝓷: version-9ac8595712b447a7
-                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 139         𝓕𝓪𝓲𝓵𝓮𝓭: 17
-                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 32.28s
+                           𝓢𝓾𝓬𝓬𝓮𝓼𝓼: 151         𝓕𝓪𝓲𝓵𝓮𝓭: 6
+                                𝓣𝓲𝓶𝓮 𝓣𝓪𝓴𝓮𝓷: 29.39s
 
 			                𝒱𝑒𝓇𝒾𝒻𝓎 𝑜𝒻𝒻𝓈𝑒𝓉𝓈 𝒷𝑒𝒻𝑜𝓇𝑒 𝓊𝓈𝑒.
 */
@@ -84,6 +84,7 @@ namespace Offsets
         const uintptr_t TaskDefer                        = REBASE(0x43C38D0);
         const uintptr_t TaskSpawn                        = REBASE(0x43C3DB0);
         const uintptr_t TaskDelay                        = REBASE(0x43C4150);
+        const uintptr_t TaskCancel                       = REBASE(0x43C46C0);
     };
 
     namespace ScriptContext {
@@ -93,6 +94,7 @@ namespace Offsets
     namespace RbxTransport {
         const uintptr_t ClientRtti                       = REBASE(0x7811B28);
         const uintptr_t AppRtti                          = REBASE(0x7775F50);
+        const uintptr_t ClientSend                       = REBASE(0x3B1E050);
         const uintptr_t ClientChannelConfig              = REBASE(0x3B1E5B0);
         const uintptr_t AppReceive                       = REBASE(0x21C0120);
         const uintptr_t AppReceiveMaxBytes               = REBASE(0x21C09D0);
@@ -107,6 +109,7 @@ namespace Offsets
         const uintptr_t Luau_Execute                     = REBASE(0x26BCFD0);
         const uintptr_t LuaD_Throw                       = REBASE(0x2691F10);
         const uintptr_t luaC_step                        = REBASE(0x26B0B80);
+        const uintptr_t ExecuteSingleStep                = REBASE(0x26BD7E0);
     };
 
     namespace Luau_Other {
@@ -140,6 +143,7 @@ namespace Offsets
         const uintptr_t pseudo2addr                      = REBASE(0x268C250);
         const uintptr_t luaM_free                        = REBASE(0x26DFAD0);
         const uintptr_t luaM_freegco                     = REBASE(0x26DFB80);
+        const uintptr_t luaM_freeblock                   = REBASE(0x26DFA20);
         const uintptr_t luaM_freeclasspage               = REBASE(0x26E0040);
         const uintptr_t lua_clock                        = REBASE(0x26E0C10);
         const uintptr_t GcStep                           = REBASE(0x26B0960);
@@ -147,15 +151,19 @@ namespace Offsets
         const uintptr_t luaL_argerrorL                   = REBASE(0x2698DA0);
         const uintptr_t luaF_newproto                    = REBASE(0x26B7AD0);
         const uintptr_t luaD_rawrunprotected             = REBASE(0x2691EE0);
+        const uintptr_t Freeobj                          = REBASE(0x26AF580);
         const uintptr_t currfuncname                     = REBASE(0x514D160);
         const uintptr_t luaO_pushvfstring                = REBASE(0x26B5D00);
         const uintptr_t luaA_toobject                    = REBASE(0x268C310);
+        const uintptr_t lua_pushvfstring                 = REBASE(0x268D7C0);
         const uintptr_t NewUserdataTagged                = REBASE(0x2690150);
         const uintptr_t Execute                          = REBASE(0x26CA240);
         const uintptr_t GetTypeName                      = REBASE(0x268CF50);
         const uintptr_t GetObjectTypeName                = REBASE(0x26B93D0);
         const uintptr_t GetObjectTypeNameString          = REBASE(0x26B9240);
+        const uintptr_t newpage                          = REBASE(0x26E0200);
         const uintptr_t Luau_Load                        = REBASE(0x26F4750);
+        const uintptr_t GetLine                          = REBASE(0x26B67C0);
         const uintptr_t CallInternal                     = REBASE(0x268DB80);
         const uintptr_t CallYieldable                    = REBASE(0x2691FF0);
     };
@@ -172,6 +180,7 @@ namespace Offsets
 
     namespace Signal {
         const uintptr_t Disconnect                       = REBASE(0x422A100);
+        const uintptr_t FireTouchInterest                = REBASE(0x155E790);
         const uintptr_t ConnectionDisconnectRaw          = REBASE(0x4A9E0B0);
         const uintptr_t ConnectionUnlink                 = REBASE(0x4A9E4F0);
         const uintptr_t ConnectionConnected              = REBASE(0x4A9E240);
@@ -186,6 +195,12 @@ namespace Offsets
         const uintptr_t Index                            = REBASE(0x4244A80);
         const uintptr_t UserdataNamecall                 = REBASE(0x42461B0);
         const uintptr_t NewIndex                         = REBASE(0x4242440);
+        const uintptr_t UserdataNewIndex                 = REBASE(0x42459C0);
+        const uintptr_t RegisterUserdata                 = REBASE(0x2691140);
+    };
+
+    namespace Event {
+        const uintptr_t IsLegalSendEvent                 = REBASE(0x47BB270);
     };
 
     namespace AppData {
