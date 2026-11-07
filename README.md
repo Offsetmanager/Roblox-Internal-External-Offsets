@@ -23,8 +23,8 @@
 </details>
 
 # Windows
-***Current player version:*** _version-11f155f3450f4c8e_  
-***Previous player version:*** _version-7a0c6d10fcb34a2c_  
+***Current player version:*** _version-f0ea5da9412f4e35_  
+***Previous player version:*** _version-4dcf516fd7214b1c_  
 
 # Credits
 ***Theo offsets*** ***Offsets Club*** ***Joseph offsets*** ***Offsets Club***  
