@@ -29,4 +29,4 @@
 # Credits
 ***Theo offsets*** ***Offsets Club*** ***Joseph offsets*** ***Offsets Club***  
 ***checkcaller*** ***thorioum*** ***realperox.ide*** ***urmoit*** ***mwaw.0***   
-***savagealt3881*** ***isourclosure*** ***credential_*** ***nyxolz*** ***lordnikky***  
+***savagealt3881*** ***isourclosure*** ***credential_*** ***nyxolz*** ***lordnikky*** ***YubX***
