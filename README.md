@@ -21,11 +21,7 @@
 ***[version-11f155f3450f4c8e](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-11f155f3450f4c8e)***  
 ***[version-7a0c6d10fcb34a2c](https://github.com/Offsetmanager/Roblox-Internal-External-Offsets/tree/main/Windows/version-7a0c6d10fcb34a2c)***
 
-</details>
-
-# Windows
-***Current player version:*** _version-f0ea5da9412f4e35_  
-***Previous player version:*** _version-4dcf516fd7214b1c_  
+</details> 
 
 # Credits
 ***Theo offsets*** ***Offsets Club*** ***Joseph offsets*** ***Offsets Club***  
